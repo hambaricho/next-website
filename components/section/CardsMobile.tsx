@@ -1,9 +1,8 @@
-import Image from 'next/image';
-import React from 'react'
+import Card from '../ui/Card';
 
 const coffees = [
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Yirgacheffe",
         origin: "Yirgacheffe Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2",
@@ -13,7 +12,7 @@ const coffees = [
         processing: "Washed, some natural",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Sidamo",
         origin: "Sidamo Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2 ",
@@ -23,7 +22,7 @@ const coffees = [
         processing: "Washed & natural",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Limu",
         origin: "Limu Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2 ",
@@ -33,7 +32,7 @@ const coffees = [
         processing: "Primarily washed",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Guji",
         origin: "Guji Zone, Ethiopia",
         grade1: "Washed - Grade 1 and 2",
@@ -43,7 +42,7 @@ const coffees = [
         processing: "Washed & natural",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Jimma",
         origin: "Jimma Zone, Ethiopia",
         grade1: "Natural - Grade 4, 5",
@@ -53,7 +52,7 @@ const coffees = [
         processing: "Mostly natural, some washed",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Nekemte",
         origin: "Nekemte (East Wollega), Ethiopia",
         grade1: "Natural - Grade 4, 5",
@@ -63,7 +62,7 @@ const coffees = [
         processing: "Predominantly natural",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Harar",
         origin: "Eastern Highlands, Ethiopia",
         grade1: "Natural - Grade 4, 5, Mocha Harrar",
@@ -75,17 +74,28 @@ const coffees = [
 
 const CardsMobile = () => {
     return (
-        <div className='grid grid-cols-2 gap-4 py-8 lg:hidden w-full'>
+        <div className='grid grid-cols-1 gap-4 py-8 lg:hidden w-full'>
             {coffees.map((coffee, index) => (
-                <div key={index}>
-                    <Image
-                        src={coffee.img}
-                        alt={coffee.name}
-                        width={700}
-                        height={480}
-                        className='w-full object-cover' />
+                // <div key={index}>
+                //     <Image
+                //         src={coffee.img}
+                //         alt={coffee.name}
+                //         width={700}
+                //         height={480}
+                //         className='w-full object-cover' />
 
-                </div>
+                // </div>
+                <Card
+                    key={index}
+                    image={coffee.img}
+                    title={coffee.name}
+                    origin={coffee.origin}
+                    grade1={coffee.grade1}
+                    grade2={coffee.grade2!}
+                    flavor={coffee.flavor}
+                    altitude={coffee.altitude}
+                    processing={coffee.processing}
+                    className="" />
             ))}
         </div>
     )

@@ -9,7 +9,7 @@ import CardsMobile from "./CardsMobile";
 
 const coffees = [
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Yirgacheffe",
         origin: "Yirgacheffe Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2",
@@ -19,7 +19,7 @@ const coffees = [
         processing: "Washed, some natural",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Sidamo",
         origin: "Sidamo Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2 ",
@@ -29,7 +29,7 @@ const coffees = [
         processing: "Washed & natural",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Limu",
         origin: "Limu Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2 ",
@@ -39,7 +39,7 @@ const coffees = [
         processing: "Primarily washed",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Guji",
         origin: "Guji Zone, Ethiopia",
         grade1: "Washed - Grade 1 and 2",
@@ -49,7 +49,7 @@ const coffees = [
         processing: "Washed & natural",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Jimma",
         origin: "Jimma Zone, Ethiopia",
         grade1: "Natural - Grade 4, 5",
@@ -59,7 +59,7 @@ const coffees = [
         processing: "Mostly natural, some washed",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Nekemte",
         origin: "Nekemte (East Wollega), Ethiopia",
         grade1: "Natural - Grade 4, 5",
@@ -69,7 +69,7 @@ const coffees = [
         processing: "Predominantly natural",
     },
     {
-        img: "/images/card.webp",
+        img: "/images/gallery.jpg",
         name: "Harar",
         origin: "Eastern Highlands, Ethiopia",
         grade1: "Natural - Grade 4, 5, Mocha Harrar",
@@ -81,20 +81,21 @@ const coffees = [
 
 
 const cardLayout = [
-    // { x: -400, y: 200, rotation: 8, z: 3 },
-    // { x: 0, y: 200, rotation: 0, z: 2 },
-    // { x: 450, y: 200, rotation: -30, z: 3 },
-    // { x: -550, y: 600, rotation: 2, z: 2 },
-    // { x: -270, y: 550, rotation: -20, z: 1 },
-    // { x: 120, y: 600, rotation: 10, z: 1 },
-    // { x: 550, y: 600, rotation: -20, z: 1 },
-    { x: -400, y: 500, rotation: 8, z: 3 },
-    { x: 0, y: 500, rotation: 0, z: 2 },
-    { x: 450, y: 500, rotation: -30, z: 3 },
-    { x: -550, y: 900, rotation: 2, z: 2 },
-    { x: -270, y: 850, rotation: -20, z: 1 },
-    { x: 120, y: 900, rotation: 10, z: 1 },
-    { x: 550, y: 800, rotation: 20, z: 1 },
+    { x: -400, y: 200, rotation: 8, z: 3 },
+    { x: 0, y: 200, rotation: 0, z: 2 },
+    { x: 450, y: 200, rotation: -30, z: 3 },
+    { x: -550, y: 600, rotation: 2, z: 2 },
+    { x: -270, y: 550, rotation: -20, z: 1 },
+    { x: 120, y: 600, rotation: 10, z: 1 },
+    { x: 550, y: 600, rotation: -20, z: 1 }
+
+    // { x: -400, y: 500, rotation: 8, z: 3 },
+    // { x: 0, y: 500, rotation: 0, z: 2 },
+    // { x: 450, y: 500, rotation: -30, z: 3 },
+    // { x: -550, y: 900, rotation: 2, z: 2 },
+    // { x: -270, y: 850, rotation: -20, z: 1 },
+    // { x: 120, y: 900, rotation: 10, z: 1 },
+    // { x: 550, y: 800, rotation: 20, z: 1 },
 ];
 
 export default function Page() {
@@ -267,27 +268,27 @@ export default function Page() {
 
             {coffees.map((coffee, i) => (
 
-                <Image
-                    src={coffee.img}
-                    alt={coffee.name}
-                    width={300}
-                    height={480}
-                    key={i}
-                    onClick={() => handleClick(i)}
-                    className="card w-80 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer object-cover hidden lg:flex"
-                />
-                // <Card
+                // <Image
+                //     src={coffee.img}
+                //     alt={coffee.name}
+                //     width={300}
+                //     height={480}
                 //     key={i}
-                //     image={coffee.img}
                 //     onClick={() => handleClick(i)}
-                //     title={coffee.name}
-                //     origin={coffee.origin}
-                //     grade1={coffee.grade1}
-                //     grade2={coffee.grade2!}
-                //     flavor={coffee.flavor}
-                //     altitude={coffee.altitude}
-                //     processing={coffee.processing}
-                //     className="card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
+                //     className="card w-80 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer object-cover hidden lg:flex"
+                // />
+                <Card
+                    key={i}
+                    image={coffee.img}
+                    onClick={() => handleClick(i)}
+                    title={coffee.name}
+                    origin={coffee.origin}
+                    grade1={coffee.grade1}
+                    grade2={coffee.grade2!}
+                    flavor={coffee.flavor}
+                    altitude={coffee.altitude}
+                    processing={coffee.processing}
+                    className="card hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
             ))}
 
 

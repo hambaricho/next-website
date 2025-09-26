@@ -10,13 +10,13 @@ type Props = {
     flavor: string
     altitude: string
     processing: string
-    onClick: () => void
+    onClick?: () => void
     className: string
 }
 
 const Card = ({ image, title, origin, grade1, grade2, flavor, altitude, processing, onClick, className }: Props) => {
     return (
-        <div className={`w-[350px] h-[65dvh] shadow-lg flex flex-col circle-cut ${className}`} onClick={onClick}>
+        <div className={`w-80 h-[65dvh] shadow-lg flex flex-col circle-cut ${className}`} onClick={onClick}>
             <Image
                 src={image}
                 alt='Card Image hambaricho'
