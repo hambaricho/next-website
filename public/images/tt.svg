@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.42 93.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: PPEditorialNew-Italic, 'PP Editorial New';
+        font-size: 40.94px;
+        font-style: italic;
+      }
+
+      .cls-2 {
+        fill: #5f3687;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.03em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-2" d="M261.42,74.09c-52.26,6.01-91.63,11.51-140.47,19.61C79.41,66.76,45.51,46,0,19.61,52.26,13.6,91.63,8.1,140.47,0c41.54,26.94,75.44,47.7,120.95,74.09Z"/>
+    <text class="cls-1" transform="translate(71.94 51.41) rotate(11.77)"><tspan class="cls-4" x="0" y="0">T</tspan><tspan class="cls-7" x="22.4" y="0">i</tspan><tspan class="cls-3" x="33.98" y="0">k</tspan><tspan class="cls-6" x="55.19" y="0">t</tspan><tspan class="cls-5" x="67.48" y="0">o</tspan><tspan class="cls-3" x="85.61" y="0">k</tspan></text>
+  </g>
+</svg>

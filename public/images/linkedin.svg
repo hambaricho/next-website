@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150.46 150.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: PPEditorialNew-Italic, 'PP Editorial New';
+        font-size: 29.66px;
+        font-style: italic;
+      }
+
+      .cls-2 {
+        fill: #b7905e;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.03em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-2" d="M129.9,85.76c25.04,55.91-22.59,88.16-65.2,44.14-55.91,25.04-88.16-22.59-44.14-65.2C-4.48,8.78,43.15-23.46,85.76,20.56c55.91-25.04,88.16,22.59,44.14,65.2Z"/>
+    <text class="cls-1" transform="translate(29.59 107.84) rotate(-23)"><tspan class="cls-5" x="0" y="0">L</tspan><tspan class="cls-3" x="16.32" y="0">i</tspan><tspan class="cls-6" x="25.01" y="0">nk</tspan><tspan class="cls-4" x="55.74" y="0">edin</tspan></text>
+  </g>
+</svg>

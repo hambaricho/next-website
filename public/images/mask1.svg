@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1421.6 1044.36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        opacity: .23;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-1" d="M1330.85,172.73v573.73c0,27.65-22.41,50.06-50.06,50.06h-218.22c-16.56,0-32.05,8.19-41.37,21.88l-78.71,115.54c-9.32,13.69-24.81,21.88-41.37,21.88H161.9c-24.92,0-45.12-20.2-45.12-45.11V172.74c0-52.57,42.61-95.18,95.18-95.18h1023.71c52.56,0,95.17,42.61,95.17,95.17Z"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-3">
+      <image width="4896" height="3264" transform="translate(0 53.67) scale(.29)" xlink:href="../../../../Downloads/strawberry-platation-mountain-stairs-and-plant-res-2025-08-27-03-05-47-utc.jpg"/>
+      <rect class="cls-2" x="11.75" width="1395.07" height="1044.36"/>
+    </g>
+  </g>
+</svg>
