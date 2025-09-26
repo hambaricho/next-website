@@ -107,7 +107,7 @@ const Landing = () => {
 
 
     return (
-        <div ref={containerRef} className="min-h-[160dvh] relative z-10 flex flex-col items-center bg-gray-100 pt-32 overflow-hidden">
+        <div ref={containerRef} className="min-h-[95dvh] md:min-h-[160dvh] relative z-10 flex flex-col items-center bg-gray-100 pt-24 md:pt-32 overflow-hidden">
             <div ref={textRef} className="text-center z-20 relative flex flex-col items-center">
                 {/* Screen reader only versions */}
                 <h1 className="sr-only">
@@ -121,14 +121,14 @@ const Landing = () => {
                 {/* Animated versions */}
                 <h1
                     ref={h1Ref}
-                    className="text-6xl text-center max-w-8xl px-4 uppercase text-secondary  font-[SuisseIntl-Bold] mb-1"
+                    className="text-4xl md:text-6xl text-center max-w-8xl px-4 uppercase text-secondary  font-[SuisseIntl-Bold] mb-1"
                     aria-hidden="true"
                 >
                     From ethiopia&lsquo;s <br /> highlands to your roastery
                 </h1>
                 <p
                     ref={pRef}
-                    className="text-2xl text-center max-w-4xl px-4 text-gray-700 font-[SuisseIntl-Light] mb-4"
+                    className="md:text-2xl text-center max-w-sm md:max-w-4xl px-4 text-gray-700 font-[SuisseIntl-Light] mb-4"
                     aria-hidden="true"
                 >
                     Hambaricho Coffee exports premium Ethiopian green beans directly
@@ -172,7 +172,7 @@ const Landing = () => {
                 width={800}
                 height={400}
                 priority
-                className="w-screen absolute bottom-20"
+                className="w-screen absolute bottom-24 md:bottom-20"
             />
 
             <Image
@@ -181,7 +181,7 @@ const Landing = () => {
                 width={800}
                 height={400}
                 priority
-                className="w-screen absolute -bottom-30"
+                className="w-screen absolute -bottom-10 md:-bottom-30"
             />
             {/* <MountainFogCanvas /> */}
             <Image
@@ -191,7 +191,7 @@ const Landing = () => {
                 width={800}
                 height={400}
                 priority
-                className="w-screen absolute object-cover -bottom-50"
+                className="w-screen absolute object-cover -bottom-40 md:-bottom-50"
             />
         </div>
     )

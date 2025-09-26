@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
+import CardsMobile from "./CardsMobile";
 
 
 const coffees = [
@@ -240,21 +241,23 @@ export default function Page() {
         <div ref={containerRef} className="w-full min-h-[180dvh] bg-secondary flex flex-col items-center justify-between overflow-hidden pt-1 pb-10 px-10">
 
             <div className="flex flex-col items-center">
-                <p className="text-xl text-center w-max  relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white">
+                <p className="text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white">
                     Our Coffee
                 </p>
-                <h2 className="text-6xl text-center relative z-10 max-w-8xl px-4 uppercase text-white font-[SuisseIntl-Bold] mb-1">
+                <h2 className="text-3xl md:text-6xl text-center relative z-10 max-w-8xl uppercase text-white font-[SuisseIntl-Bold] mb-1">
                     From ethiopia&lsquo;s lands <br /> to every horizon
                 </h2>
-                <p className="text-2xl text-center relative z-10 max-w-4xl px-4 text-gray-200 font-[SuisseIntl-Light] mb-4">
+                <p className="md:text-2xl text-center relative z-10 max-w-4xl px-4 text-gray-200 font-[SuisseIntl-Light] mb-4">
                     Hambaricho Coffee exports premium Ethiopian green beans directly
                     from trusted producers, rooted in heritage, delivered with reliability.
                 </p>
             </div>
 
-            <div className="w-full flex flex-col items-end justify-center">
+            <div className="w-full flex flex-col items-center md:items-end justify-center">
                 <Button text="Catalogue" className="bg-primary text-black w-max border-2 border-white" />
             </div>
+
+            <CardsMobile />
             <div
                 ref={overlayRef}
                 className="absolute inset-0 bg-black/30 transition-all"
@@ -271,7 +274,7 @@ export default function Page() {
                     height={480}
                     key={i}
                     onClick={() => handleClick(i)}
-                    className="card w-80 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer object-cover"
+                    className="card w-80 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer object-cover hidden lg:flex"
                 />
                 // <Card
                 //     key={i}
