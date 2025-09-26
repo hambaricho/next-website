@@ -56,15 +56,18 @@ const CapsulePhysics = () => {
 
         type SocialBody = Matter.Body & { url: string };
 
-        const socialBodies: SocialBody[] = socials.map((s, i) => {
+        let socialBodies: SocialBody[] = [];
+        if (window.innerWidth > 600) {
+            socialBodies = socials.map((s, i) => {
             const body = Bodies.circle(200 + i * 200, 150, 80, {
                 render: {
-                    sprite: { texture: s.img, xScale: 1, yScale: 1 },
+                sprite: { texture: s.img, xScale: 1, yScale: 1 },
                 },
             }) as SocialBody;
             body.url = s.url;
             return body;
-        });
+            });
+        }
 
         World.add(world, socialBodies);
 

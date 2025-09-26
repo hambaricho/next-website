@@ -50,64 +50,62 @@ const Landing = () => {
     })
 
     useGSAP(() => {
-        gsap.to(bg2Ref.current, {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top 80%",
-                end: "bottom center",
-                scrub: true,
-            },
-            y: 160,
-        });
-    })
+        if (window.innerWidth >= 768) {
+            gsap.to(bg2Ref.current, {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top 80%",
+                    end: "bottom center",
+                    scrub: true,
+                },
+                y: 160,
+            });
 
-    useGSAP(() => {
-        gsap.to(birds1Ref.current, {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top 80%",
-                end: "bottom center",
-                scrub: true,
-            },
-            y: 100,
-            x: 40,
-        });
-        gsap.to(birds2Ref.current, {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top 80%",
-                end: "bottom center",
-                scrub: true,
-            },
-            y: 120,
-            x: -60,
-        });
-        gsap.to(birds3Ref.current, {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top 80%",
-                end: "bottom center",
-                scrub: true,
-            },
-            y: 80,
-            x: 30,
-        });
-    })
+            gsap.to(birds1Ref.current, {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top 80%",
+                    end: "bottom center",
+                    scrub: true,
+                },
+                y: 100,
+                x: 40,
+            });
+            gsap.to(birds2Ref.current, {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top 80%",
+                    end: "bottom center",
+                    scrub: true,
+                },
+                y: 120,
+                x: -60,
+            });
+            gsap.to(birds3Ref.current, {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top 80%",
+                    end: "bottom center",
+                    scrub: true,
+                },
+                y: 80,
+                x: 30,
+            });
 
-    useGSAP(() => {
-        gsap.to(bg1Ref.current, {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top 50%",
-                scrub: true,
-            },
-            y: -180,
-        });
+            gsap.to(bg1Ref.current, {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top 50%",
+                    scrub: true,
+                },
+                y: -180,
+            });
+        }
     })
 
 
     return (
-        <div ref={containerRef} className="min-h-[95dvh] md:min-h-[160dvh] relative z-10 flex flex-col items-center bg-gray-100 pt-24 md:pt-32 overflow-hidden">
+        <div ref={containerRef} className="min-h-[90dvh] md:min-h-[160dvh] relative z-10 flex flex-col items-center bg-gray-100 pt-24 md:pt-32 overflow-hidden">
             <div ref={textRef} className="text-center z-20 relative flex flex-col items-center">
                 {/* Screen reader only versions */}
                 <h1 className="sr-only">
@@ -144,7 +142,7 @@ const Landing = () => {
                 width={100}
                 height={100}
                 priority
-                className="w-40 absolute top-1/3 left-40"
+                className="w-12 md:w-40 absolute top-2/3 md:top-1/3 left-40"
             />
             <Image
                 ref={birds2Ref}
@@ -153,7 +151,7 @@ const Landing = () => {
                 width={100}
                 height={100}
                 priority
-                className="w-40 absolute top-1/3 right-1/2"
+                className="w-12 md:w-40 absolute top-2/3 md:top-1/3 right-1/2"
             />
             <Image
                 ref={birds3Ref}
@@ -162,7 +160,7 @@ const Landing = () => {
                 width={100}
                 height={100}
                 priority
-                className="w-40 absolute top-2/5 right-1/2"
+                className="w-12 md:w-40 absolute top-3/5 md:top-2/5 right-1/2"
             />
 
             <Image
@@ -172,7 +170,7 @@ const Landing = () => {
                 width={800}
                 height={400}
                 priority
-                className="w-screen absolute bottom-24 md:bottom-20"
+                className="w-screen absolute bottom-20 md:bottom-20"
             />
 
             <Image
@@ -181,7 +179,7 @@ const Landing = () => {
                 width={800}
                 height={400}
                 priority
-                className="w-screen absolute -bottom-10 md:-bottom-30"
+                className="w-screen absolute bottom-6 md:-bottom-30"
             />
             {/* <MountainFogCanvas /> */}
             <Image
@@ -191,7 +189,7 @@ const Landing = () => {
                 width={800}
                 height={400}
                 priority
-                className="w-screen absolute object-cover -bottom-40 md:-bottom-50"
+                className="w-screen absolute object-cover bottom-0 md:-bottom-50"
             />
         </div>
     )

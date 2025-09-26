@@ -3,6 +3,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -239,7 +240,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
   return (
     <div ref={containerRef} className={`${className} bg-secondary`}>
 
-      <section ref={stickyRef} className="relative flex flex-col md:flex-row w-screen h-screen">
+      <section ref={stickyRef} className="relative flex flex-col md:flex-row w-screen h-[97dvh] md:min-h-[100dvh]">
 
         <Image
           src={`/images/organic.webp`}
@@ -254,7 +255,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
             {/* Indicator */}
             <div
               ref={indicatorRef}
-              className="absolute top-0 left-20 w-[34px] h-[34px] md:h-[32px] bg-primary -z-10 transform translate-y-0"
+              className="absolute top-0 left-20 w-[34px] h-[34px] md:h-[32px] bg-white -z-10 transform translate-y-0 hidden lg:block"
             />
 
             {/* Services List */}
@@ -266,7 +267,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
                 }}
                 className={`w-max h-[38px] service ${index === 0 ? 'active' : ''}`}
               >
-                <p className="uppercase text-white text-4xl font-[SuisseIntl-Bold] transition-colors duration-300 service-text">
+                <p className="uppercase text-white text-2xl md:text-4xl font-[SuisseIntl-Bold] transition-colors duration-300 service-text">
                   {service}
                 </p>
               </div>
@@ -275,9 +276,9 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
         </div>
 
         {/* Content Column */}
-        <div className="flex-1 flex flex-row md:flex-col justify-center items-center gap-6 md:gap-8 px-2">
+        <div className="flex-1 flex flex-col justify-center items-center gap-6 md:gap-8 px-2">
           {/* Service Images */}
-          <div className="relative w-[45%] md:w-[60%] h-[250px] overflow-hidden">
+          <div className="relative w-full md:w-[60%] h-[250px] overflow-hidden">
             <div
               className="absolute inset-0 inverted-radius-bottom-right-small"
             >
@@ -300,7 +301,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
           </div>
 
           {/* Service Copy */}
-          <div className="w-[70%] md:w-[60%]">
+          <div className="w-[100%] md:w-[60%]">
             <p
               ref={serviceCopyRef}
               className="font-[SuisseIntl-Light] text-xl"
@@ -311,7 +312,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
         </div>
 
         {/* Progress Bar */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] md:rotate-0 w-[2.5px] h-[50%] md:h-[60%] bg-white">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] md:rotate-0 w-[4px] h-[50%] md:h-[60%] bg-white">
           <div
             ref={progressRef}
             className="absolute top-0 left-0 w-full h-full bg-primary origin-top transform scale-y-0 will-change-transform"
@@ -319,7 +320,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
         </div>
 
         {/* Index Counter */}
-        <div className="absolute top-[1%] md:bottom-[10%] md:top-auto left-1/2 transform -translate-x-1/2 w-[60px] px-1 py-1 flex justify-between items-center text-white">
+        <div className="absolute top-5 md:bottom-[10%] md:top-auto left-1/2 transform -translate-x-1/2 w-[60px] px-1 py-1 flex justify-between items-center text-white">
           <span
             ref={currentCountRef}
             className="font-mono text-xl font-semibold leading-3 w-3 flex justify-center items-center"
@@ -336,33 +337,11 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
       {/* Custom Styles */}
       <style jsx>{`
         .service.active .service-text {
-          color: #ffffff;
+          color: #94c35f;
         }
         
         body {
           height: 1100vh;
-        }
-        
-        .lenis.lenis-smooth {
-          scroll-behavior: auto !important;
-        }
-        
-        .lenis.lenis-smooth [data-lenis-prevent] {
-          overscroll-behavior: contain;
-        }
-        
-        .lenis.lenis-stopped {
-          overflow: hidden;
-        }
-        
-        .lenis.lenis-smooth iframe {
-          pointer-events: none;
-        }
-        
-        @media (max-width: 900px) {
-          .service .service-text {
-            font-size: 40px;
-          }
         }
       `}</style>
     </div>

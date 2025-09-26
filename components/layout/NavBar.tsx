@@ -1,6 +1,6 @@
 "use client"
-import React, { useState, useEffect } from "react"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 const navLinks = [
   { name: "Products", href: "#products" },
@@ -51,7 +51,7 @@ const NavBar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-lg font-[SuisseIntl-Light] px-4 py-2 rounded transition-colors hover:bg-secondary hover:text-white"
+              className="text-lg font-[SuisseIntl-Light] px-4 py-2 rounded transition-colors text-secondary"
             >
               {link.name}
             </a>
@@ -60,26 +60,6 @@ const NavBar = () => {
 
         {/* Right: Emoji buttons, theme switcher */}
         <div className="flex items-center gap-2">
-          {/* Emoji cursor buttons */}
-          {emojiCursors.map(ec => (
-            <button
-              key={ec.name}
-              onClick={() => setCursor(ec.src)}
-              className="w-10 h-10 flex items-center justify-center bg-[#e5e5e5] rounded hover:bg-secondary"
-              aria-label={`Set cursor to ${ec.name}`}
-            >
-              <Image src={ec.src} alt={ec.name} width={24} height={24} />
-            </button>
-          ))}
-          {/* Reset cursor */}
-          <button
-            onClick={() => setCursor(null)}
-            className="w-10 h-10 flex items-center justify-center bg-[#e5e5e5] rounded border"
-            aria-label="Reset cursor"
-          >
-            <Image src="/images/card.webp" alt="reset cursor" width={24} height={24} />
-          </button>
-
           {/* Theme switcher */}
           <button
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}

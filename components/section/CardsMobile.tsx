@@ -83,7 +83,7 @@ const CardsMobile = () => {
                         alt={coffee.name}
                         width={700}
                         height={480}
-                        className='w-full h-96 object-cover' />
+                        className='w-full object-cover' />
 
                 </div>
             ))}
