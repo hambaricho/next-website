@@ -80,12 +80,12 @@ const coffees = [
 
 
 const cardLayout = [
-    { x: -300, y: 25, rotation: -8, z: 3 },
-    { x: 0, y: 25, rotation: 0, z: 2 },
-    { x: 300, y: 25, rotation: 10, z: 3 },
-    { x: -450, y: 500, rotation: 2, z: 2 },
-    { x: -170, y: 450, rotation: 20, z: 1 },
-    { x: 120, y: 500, rotation: 10, z: 1 },
+    { x: -300, y: 25, rotation: -8, z: 10 },
+    { x: 0, y: 25, rotation: 0, z: 10 },
+    { x: 300, y: 25, rotation: 10, z: 10 },
+    { x: -450, y: 500, rotation: 2, z: 10 },
+    { x: -170, y: 450, rotation: 20, z: 10 },
+    { x: 120, y: 500, rotation: 10, z: 10 },
     { x: 450, y: 500, rotation: -20, z: 1 }
 ];
 

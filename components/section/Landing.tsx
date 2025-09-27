@@ -6,6 +6,7 @@ import { SplitText } from "gsap/SplitText"
 import Image from "next/image"
 import Button from "../ui/Button"
 import { useGSAP } from "@gsap/react"
+import SVGLine from "../ui/SVGLine"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -181,7 +182,7 @@ const Landing = () => {
                 priority
                 className="w-screen absolute bottom-6 md:-bottom-30"
             />
-            {/* <MountainFogCanvas /> */}
+            <SVGLine />
             <Image
                 ref={bg1Ref}
                 src="/images/bg1.svg"
@@ -189,7 +190,7 @@ const Landing = () => {
                 width={800}
                 height={400}
                 priority
-                className="w-screen absolute object-cover bottom-0 md:-bottom-50"
+                className="w-screen absolute z-20 object-cover bottom-0 md:-bottom-50"
             />
         </div>
     )

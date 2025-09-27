@@ -3,6 +3,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
+import { Coffee, Star } from 'lucide-react';
 import Image from 'next/image';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -235,31 +236,34 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
   }, [animateTextChange, measureServiceWidths]);
 
   return (
-    <div ref={containerRef} className={`${className} bg-secondary`}>
+    <div ref={containerRef} className={`${className} bg-secondary relative z-20`}>
 
       <section ref={stickyRef} className="relative flex flex-col md:flex-row w-screen h-[97dvh] md:min-h-[100dvh]">
-
-        <Image
-          src={`/images/organic.webp`}
-          alt="Coffee Background"
-          width={120}
-          height={120}
-          className="hidden lg:flex object-cover absolute left-1/2 -translate-x-1/2 bottom-8 z-10"
-        />
 
         <h4
           className="text-4xl md:text-6xl text-center max-w-xl px-4 uppercase font-[SuisseIntl-Bold] mb-1 text-white absolute left-1/2 -translate-x-1/2 top-12 z-10 hidden lg:block"
         >
           Our Services
         </h4>
+
+        <Image
+          src={`/images/arrowDown.webp`}
+          alt={"arrow down svg hambaricho"}
+          width={40}
+          height={40}
+          className="object-cover absolute left-1/2 -translate-x-1/2 bottom-10"
+        />
         {/* Services Column */}
         <div className="flex-1 flex flex-col justify-center md:justify-center items-center gap-8 pt-0 md:pt-0">
           <div className="relative flex flex-col items-center">
             {/* Indicator */}
             <div
               ref={indicatorRef}
-              className="absolute top-0 left-20 w-[34px] h-[34px] md:h-[32px] bg-white -z-10 transform translate-y-0 hidden lg:block"
-            />
+              className="absolute justify-between items-center top-0 left-20 w-[34px] h-[34px] md:h-[32px] bg-white -z-10 transform translate-y-0 hidden lg:flex"
+            >
+              <Coffee className='text-primary w-6 h-6'/>
+              <Coffee className='text-primary w-6 h-6'/>
+            </div>
 
             {/* Services List */}
             {services.map((service, index) => (
