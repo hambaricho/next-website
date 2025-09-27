@@ -42,7 +42,7 @@ const NavBar = () => {
       <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-2 bg-gray-200">
         {/* Left: Logo */}
         <div className="flex items-center gap-2">
-          <Image src="/images/logo.webp" alt="Logo" width={40} height={40} />
+          <Image src="/images/footerLogo.svg" alt="Logo" width={40} height={40} />
         </div>
 
         {/* Center: Nav Links */}

@@ -244,13 +244,13 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
           alt="Coffee Background"
           width={120}
           height={120}
-          className="hidden lg:flex object-cover absolute left-1/2 -translate-x-1/2 top-8 z-10"
+          className="hidden lg:flex object-cover absolute left-1/2 -translate-x-1/2 bottom-8 z-10"
         />
 
         <h4
-          className="text-4xl md:text-6xl text-center max-w-xl px-4 uppercase font-[SuisseIntl-Bold] mb-1 text-white absolute left-1/4 -translate-x-1/2 top-12 z-10 hidden lg:block"
+          className="text-4xl md:text-6xl text-center max-w-xl px-4 uppercase font-[SuisseIntl-Bold] mb-1 text-white absolute left-1/2 -translate-x-1/2 top-12 z-10 hidden lg:block"
         >
-          Our Sectoral Services
+          Our Services
         </h4>
         {/* Services Column */}
         <div className="flex-1 flex flex-col justify-center md:justify-center items-center gap-8 pt-0 md:pt-0">
@@ -292,7 +292,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
                 {[...Array(8)].map((_, index) => (
                   <div key={index} className="w-full h-[250px] relative">
                     <Image
-                      src={`/images/coffee/c1.jpeg`}
+                      src={`/images/service/s${index + 1}.jpeg`}
                       alt={`Service ${index + 1}`}
                       fill
                       className="object-cover"
@@ -323,7 +323,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
         </div>
 
         {/* Index Counter */}
-        <div className="absolute top-5 md:bottom-[10%] md:top-auto left-1/2 transform -translate-x-1/2 w-[60px] px-1 py-1 flex justify-between items-center text-white">
+        <div className="absolute top-5 md:top-[17%] left-1/2 transform -translate-x-1/2 w-[60px] px-1 py-1 flex justify-between items-center text-white">
           <span
             ref={currentCountRef}
             className="font-mono text-xl font-semibold leading-3 w-3 flex justify-center items-center"
