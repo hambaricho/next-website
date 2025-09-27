@@ -3,7 +3,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
-import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -196,11 +195,9 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
               }
             });
 
-            // Animate indicator, image, counter, and text
             const animations = [
               indicatorRef.current && gsap.to(indicatorRef.current, {
                 y: activeIndex * serviceHeight,
-                // width: widths[activeIndex],
                 duration: 0.3,
                 ease: "power3.inOut",
                 overwrite: true,
@@ -247,8 +244,14 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
           alt="Coffee Background"
           width={120}
           height={120}
-          className="hidden lg:flex object-cover absolute left-1/2 -translate-x-1/2 top-10 z-10"
+          className="hidden lg:flex object-cover absolute left-1/2 -translate-x-1/2 top-8 z-10"
         />
+
+        <h4
+          className="text-4xl md:text-6xl text-center max-w-xl px-4 uppercase font-[SuisseIntl-Bold] mb-1 text-white absolute left-1/4 -translate-x-1/2 top-12 z-10 hidden lg:block"
+        >
+          Our Sectoral Services
+        </h4>
         {/* Services Column */}
         <div className="flex-1 flex flex-col justify-center md:justify-center items-center gap-8 pt-0 md:pt-0">
           <div className="relative flex flex-col items-center">
@@ -304,7 +307,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
           <div className="w-[100%] md:w-[60%]">
             <p
               ref={serviceCopyRef}
-              className="font-[SuisseIntl-Light] text-xl"
+              className="font-[SuisseIntl-Light] text-xl text-white"
             >
               {servicesCopy[0][0]}
             </p>
@@ -312,10 +315,10 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
         </div>
 
         {/* Progress Bar */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] md:rotate-0 w-[4px] h-[50%] md:h-[60%] bg-white">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] md:rotate-0 w-2 rounded h-[50%] md:h-[60%] bg-white">
           <div
             ref={progressRef}
-            className="absolute top-0 left-0 w-full h-full bg-primary origin-top transform scale-y-0 will-change-transform"
+            className="absolute top-0 left-0 w-full h-full rounded bg-primary origin-top transform scale-y-0 will-change-transform"
           />
         </div>
 

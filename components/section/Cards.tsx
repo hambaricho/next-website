@@ -1,8 +1,7 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-import Button from "../ui/Button";
+import { useEffect, useRef, useState } from "react";
 import Card from "../ui/Card";
 import CardsMobile from "./CardsMobile";
 
@@ -81,21 +80,13 @@ const coffees = [
 
 
 const cardLayout = [
-    { x: -400, y: 200, rotation: 8, z: 3 },
-    { x: 0, y: 200, rotation: 0, z: 2 },
-    { x: 450, y: 200, rotation: -30, z: 3 },
-    { x: -550, y: 600, rotation: 2, z: 2 },
-    { x: -270, y: 550, rotation: -20, z: 1 },
-    { x: 120, y: 600, rotation: 10, z: 1 },
-    { x: 550, y: 600, rotation: -20, z: 1 }
-
-    // { x: -400, y: 500, rotation: 8, z: 3 },
-    // { x: 0, y: 500, rotation: 0, z: 2 },
-    // { x: 450, y: 500, rotation: -30, z: 3 },
-    // { x: -550, y: 900, rotation: 2, z: 2 },
-    // { x: -270, y: 850, rotation: -20, z: 1 },
-    // { x: 120, y: 900, rotation: 10, z: 1 },
-    // { x: 550, y: 800, rotation: 20, z: 1 },
+    { x: -300, y: 25, rotation: -8, z: 3 },
+    { x: 0, y: 25, rotation: 0, z: 2 },
+    { x: 300, y: 25, rotation: 10, z: 3 },
+    { x: -450, y: 500, rotation: 2, z: 2 },
+    { x: -170, y: 450, rotation: 20, z: 1 },
+    { x: 120, y: 500, rotation: 10, z: 1 },
+    { x: 450, y: 500, rotation: -20, z: 1 }
 ];
 
 export default function Page() {
@@ -218,8 +209,6 @@ export default function Page() {
                 ? (activeIndex + 1) % coffees.length
                 : (activeIndex - 1 + coffees.length) % coffees.length;
         const nextCard = cards[newIndex] as HTMLElement;
-
-        // Animate current card back to its layout
         const { x, y, rotation, z } = cardLayout[activeIndex];
         gsap.to(currentCard, {
             x,
@@ -239,8 +228,7 @@ export default function Page() {
     };
 
     return (
-        <div ref={containerRef} className="w-full min-h-[180dvh] bg-secondary flex flex-col items-center justify-between overflow-hidden pt-6 md:pt-1 pb-10 px-10">
-
+        <>
             <div className="flex flex-col items-center">
                 <p className="text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white">
                     Our Coffee
@@ -254,70 +242,58 @@ export default function Page() {
                 </p>
             </div>
 
-            <div className="w-full flex flex-col items-center md:items-end justify-center">
-                <Button text="Catalogue" className="bg-primary text-black w-max border-2 border-white" />
+            <div ref={containerRef} className="relative w-full min-h-[140dvh] bg-secondary flex flex-col items-center justify-between pt-6 md:pt-1 pb-10 px-10">
+                <CardsMobile />
+                <div
+                    ref={overlayRef}
+                    className="fixed inset-0 bg-black/30 transition-all"
+                    style={{ opacity: 0, zIndex: -1 }}
+                    onClick={closeActive}
+                />
+
+                {coffees.map((coffee, i) => (
+                    <Card
+                        key={i}
+                        image={coffee.img}
+                        onClick={() => handleClick(i)}
+                        title={coffee.name}
+                        origin={coffee.origin}
+                        grade1={coffee.grade1}
+                        grade2={coffee.grade2!}
+                        flavor={coffee.flavor}
+                        altitude={coffee.altitude}
+                        processing={coffee.processing}
+                        className="card hidden lg:block absolute cursor-pointer" />
+                ))}
+
+
+
+                {activeIndex !== null && (
+                    <>
+                        {/* Left Button */}
+                        <button
+                            className="fixed left-4 top-1/2 -translate-y-1/2 cursor-pointer active:scale-95 transition-transform z-[1000]"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                navigateCard("prev");
+                            }}
+                        >
+                            <Image src="/images/arrow.webp" alt="Previous" width={24} height={24} className="rotate-180" />
+                        </button>
+
+                        {/* Right Button */}
+                        <button
+                            className="fixed right-4 top-1/2 -translate-y-1/2 cursor-pointer active:scale-95 transition-transform z-[1000]"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                navigateCard("next");
+                            }}
+                        >
+                            <Image src="/images/arrow.webp" alt="Next" width={24} height={24} />
+                        </button>
+                    </>
+                )}
             </div>
-
-            <CardsMobile />
-            <div
-                ref={overlayRef}
-                className="absolute inset-0 bg-black/30 transition-all"
-                style={{ opacity: 0, zIndex: -1 }}
-                onClick={closeActive}
-            />
-
-            {coffees.map((coffee, i) => (
-
-                // <Image
-                //     src={coffee.img}
-                //     alt={coffee.name}
-                //     width={300}
-                //     height={480}
-                //     key={i}
-                //     onClick={() => handleClick(i)}
-                //     className="card w-80 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer object-cover hidden lg:flex"
-                // />
-                <Card
-                    key={i}
-                    image={coffee.img}
-                    onClick={() => handleClick(i)}
-                    title={coffee.name}
-                    origin={coffee.origin}
-                    grade1={coffee.grade1}
-                    grade2={coffee.grade2!}
-                    flavor={coffee.flavor}
-                    altitude={coffee.altitude}
-                    processing={coffee.processing}
-                    className="card hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
-            ))}
-
-
-
-            {activeIndex !== null && (
-                <>
-                    {/* Left Button */}
-                    <button
-                        className="fixed left-4 top-1/2 -translate-y-1/2 cursor-pointer active:scale-95 transition-transform z-[1000]"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            navigateCard("prev");
-                        }}
-                    >
-                        <Image src="/images/arrow.webp" alt="Previous" width={24} height={24} className="rotate-180" />
-                    </button>
-
-                    {/* Right Button */}
-                    <button
-                        className="fixed right-4 top-1/2 -translate-y-1/2 cursor-pointer active:scale-95 transition-transform z-[1000]"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            navigateCard("next");
-                        }}
-                    >
-                        <Image src="/images/arrow.webp" alt="Next" width={24} height={24} />
-                    </button>
-                </>
-            )}
-        </div>
+        </>
     );
 }

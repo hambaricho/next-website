@@ -16,19 +16,19 @@ type Props = {
 
 const Card = ({ image, title, origin, grade1, grade2, flavor, altitude, processing, onClick, className }: Props) => {
     return (
-        <div className={`w-80 h-[65dvh] shadow-lg flex flex-col circle-cut ${className}`} onClick={onClick}>
+        <div className={`w-[300px] flex flex-col circle-cut ${className}`} onClick={onClick}>
             <Image
                 src={image}
                 alt='Card Image hambaricho'
                 width={300}
                 height={480}
-                className='h-[50%] w-full object-cover rounded-t-lg'
+                className='h-[50%] w-full rounded-lg object-cover'
             />
-            <div className='flex-1 p-4 bg-white rounded-b-lg'>
+            <div className='flex-1 p-4 rounded-lg  bg-white border-[1px] border-secondary'>
                 <p className='text-2xl text-center text-secondary uppercase font-[PPEditorialNew-Ultrabold]'>{title}</p>
-                <ul className='text-secondary font-[SuisseIntl-Light] bullet-list'>
-                    <li><span className='font-[SuisseIntl-Regular] font-semibold'>Origin:</span> {origin}</li>
-                    <li ><span className='font-[SuisseIntl-Regular] font-semibold'>Grades</span> <br />
+                <ul className='font-[SuisseIntl-Light] bullet-list text-gray-700'>
+                    <li><span className='font-[SuisseIntl-Regular] text-black'>Origin:</span> {origin}</li>
+                    <li ><span className='font-[SuisseIntl-Regular] text-black'>Grades</span> <br />
                         <span className='inline-block'>
                             {grade1}
                         </span> <br />
@@ -38,9 +38,9 @@ const Card = ({ image, title, origin, grade1, grade2, flavor, altitude, processi
                             </span>
                         }
                     </li>
-                    <li><span className='font-[SuisseIntl-Regular] font-semibold'>Flavor:</span> {flavor}</li>
-                    <li><span className='font-[SuisseIntl-Regular] font-semibold'>Altitude:</span> {altitude}</li>
-                    <li><span className='font-[SuisseIntl-Regular] font-semibold'>Processing:</span> {processing}</li>
+                    <li><span className='font-[SuisseIntl-Regular] text-black'>Flavor:</span> {flavor}</li>
+                    <li><span className='font-[SuisseIntl-Regular] text-black'>Altitude:</span> {altitude}</li>
+                    <li><span className='font-[SuisseIntl-Regular] text-black'>Processing:</span> {processing}</li>
                 </ul>
             </div>
         </div>
