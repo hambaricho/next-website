@@ -8,27 +8,9 @@ const navLinks = [
   { name: "Contact", href: "#contact" }
 ]
 
-const emojiCursors = [
-  { name: "jebena", src: "/images/jebena.webp" },
-  { name: "bean", src: "/images/bean.webp" }
-]
-
 const NavBar = () => {
   const [theme, setTheme] = useState("light")
-  const [cursor, setCursor] = useState<string | null>(null)
 
-  useEffect(() => {
-    if (cursor) {
-      document.body.style.cursor = `url(${cursor}), auto`
-    } else {
-      document.body.style.cursor = "auto"
-    }
-    return () => {
-      document.body.style.cursor = "auto"
-    }
-  }, [cursor])
-
-  // Theme switcher toggles landing page bg
   useEffect(() => {
     const landing = document.querySelector(".landing-bg")
     if (landing) {
