@@ -251,7 +251,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
           alt={"arrow down svg hambaricho"}
           width={40}
           height={40}
-          className="object-cover absolute left-1/2 -translate-x-1/2 bottom-10"
+          className="hidden lg:block object-cover absolute left-1/2 -translate-x-1/2 bottom-10"
         />
         {/* Services Column */}
         <div className="flex-1 flex flex-col justify-center md:justify-center items-center gap-8 pt-0 md:pt-0">

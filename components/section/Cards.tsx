@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Card from "../ui/Card";
 import CardsMobile from "./CardsMobile";
+import { AnimatedHeader } from "../ui/AnimatedHeader";
+import { MaskText } from "../ui/MaskTextAnimation";
 
 
 const coffees = [
@@ -233,13 +235,18 @@ export default function Page() {
                 <p className="text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white">
                     Our Coffee
                 </p>
-                <h2 className="text-[1.6rem] md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold] mb-1">
-                    From ethiopia&lsquo;s lands <br /> to every horizon
-                </h2>
-                <p className="md:text-2xl text-center relative z-10 md:max-w-4xl text-gray-200 font-[SuisseIntl-Light] mb-4">
-                    Hambaricho Coffee exports premium Ethiopian green beans directly
-                    from trusted producers, rooted in heritage, delivered with reliability.
-                </p>
+                <AnimatedHeader as="h2"
+                    className="text-[1.6rem] md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold] mb-1"
+                    text="From Ethiopia&lsquo;s lands" />
+                <AnimatedHeader as="h2"
+                    className="text-[1.6rem] md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold] mb-1"
+                    text="to every horizon" />
+
+                <MaskText className="md:text-2xl text-center relative z-10 md:max-w-4xl text-gray-200 font-[SuisseIntl-Light] mb-4"
+                    text='Hambaricho Coffee exports premium Ethiopian green beans directly
+                    from trusted producers, rooted in heritage, delivered with reliability.'
+                />
+
             </div>
 
             <div ref={containerRef} className="relative w-full min-h-[140dvh] bg-secondary flex flex-col items-center justify-between pt-6 md:pt-1 pb-10 px-10">

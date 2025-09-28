@@ -74,7 +74,7 @@ const coffees = [
 
 const CardsMobile = () => {
     return (
-        <div className='grid grid-cols-1 gap-4 py-8 lg:hidden w-full'>
+        <div className='grid grid-cols-1 gap-4 py-8 place-content-center place-items-center lg:hidden w-full'>
             {coffees.map((coffee, index) => (
                 // <div key={index}>
                 //     <Image

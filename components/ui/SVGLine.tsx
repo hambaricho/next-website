@@ -3,7 +3,7 @@ import React from 'react'
 const SVGLine = () => {
 
     return (
-        <svg className='absolute z-10 w-[150vw] svg-line top-[100vh]' id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1953.4 3662.76">
+        <svg className='hidden lg:block absolute z-10 w-[150vw] svg-line top-[100vh]' id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1953.4 3662.76">
             <defs>
                 <style>{`
         .cls-1 {

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { MaskText } from '../ui/MaskTextAnimation'
 
 
 const Images = () => {
@@ -10,10 +11,11 @@ const Images = () => {
                 <div className='absolute z-20 inverted-radius-bottom-right  top-0 left-0 w-full h-full bg-black/40 overflow-hidden'>
                 </div>
 
-                <p className='absolute z-20 bottom-8 left-8 text-white text-2xl font-bold font-[SuisseIntl-Regular] max-w-sm md:max-w-xl'>
-                    From farm to cup, Hambaricho Coffee brings you premium, sustainably grown beans,
-                    handpicked with care and rooted in tradition.
-                </p>
+                <MaskText
+                    text='From farm to cup, Hambaricho Coffee brings you premium, sustainably grown beans, handpicked with care and rooted in tradition.'
+                    className='absolute z-20 bottom-8 left-8 text-white text-2xl font-bold font-[SuisseIntl-Regular] max-w-sm md:max-w-xl'
+                />
+
                 <Image
                     src={"/images/natural.webp"}
                     alt="logo hambaricho"
@@ -42,10 +44,11 @@ const Images = () => {
             </div>
             <div className='w-4/5 h-[500px] relative'>
 
+                <MaskText
+                    text='Explore our selection of green beans, roasted coffee, and premium blends — crafted for quality, freshness, and flavor.'
+                    className='absolute z-20 bottom-8 right-8 text-white text-right text-2xl font-bold font-[SuisseIntl-Regular] max-w-sm md:max-w-xl'
+                />
 
-                <p className='absolute z-20 bottom-8 right-8 text-white text-right text-2xl font-bold font-[SuisseIntl-Regular] max-w-sm md:max-w-xl'>
-                    Explore our selection of green beans, roasted coffee, and premium blends — crafted for quality, freshness, and flavor.
-                </p>
                 <Image
                     src={"/images/logoWithText.webp"}
                     alt="logo hambaricho"

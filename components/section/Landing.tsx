@@ -7,6 +7,8 @@ import Image from "next/image"
 import Button from "../ui/Button"
 import { useGSAP } from "@gsap/react"
 import SVGLine from "../ui/SVGLine"
+import { MaskText } from "../ui/MaskTextAnimation"
+import { AnimatedHeader } from "../ui/AnimatedHeader"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -14,7 +16,7 @@ const Landing = () => {
     const containerRef = useRef<HTMLDivElement>(null)
     const textRef = useRef<HTMLDivElement>(null)
     const h1Ref = useRef<HTMLHeadingElement>(null)
-    const pRef = useRef<HTMLParagraphElement>(null)
+
     const birds1Ref = useRef<HTMLImageElement>(null)
     const birds2Ref = useRef<HTMLImageElement>(null)
     const birds3Ref = useRef<HTMLImageElement>(null)
@@ -22,9 +24,8 @@ const Landing = () => {
     const bg1Ref = useRef<HTMLImageElement>(null)
 
     useGSAP(() => {
-        if (h1Ref.current && pRef.current) {
+        if (h1Ref.current) {
             const h1Split = new SplitText(h1Ref.current, { type: "words,chars" })
-            const pSplit = new SplitText(pRef.current, { type: "words" })
 
             gsap.from(h1Split.chars, {
                 x: 50,
@@ -32,13 +33,6 @@ const Landing = () => {
                 duration: 1,
                 stagger: 0.01,
                 ease: "back.out(1.7)",
-            })
-
-            gsap.from(pSplit.words, {
-                y: 50,
-                autoAlpha: 0,
-                duration: 0.6,
-                ease: "power2.inOut",
             })
 
             gsap.from(".landing-button", {
@@ -118,21 +112,18 @@ const Landing = () => {
                 </p>
 
                 {/* Animated versions */}
-                <h1
-                    ref={h1Ref}
-                    className="text-4xl md:text-6xl text-center max-w-8xl px-4 uppercase text-secondary  font-[SuisseIntl-Bold] mb-1"
-                    aria-hidden="true"
-                >
-                    From ethiopia&lsquo;s <br /> highlands to your roastery
-                </h1>
-                <p
-                    ref={pRef}
+
+                <AnimatedHeader as="h1"
+                    className="text-4xl md:text-6xl text-center max-w-[870px] px-4 uppercase text-secondary font-[SuisseIntl-Bold] mb-1"
+                    text="From Ethiopia&lsquo;s" />
+                <AnimatedHeader as="h1"
+                    className="text-4xl md:text-6xl text-center max-w-8xl px-4 uppercase text-secondary font-[SuisseIntl-Bold] mb-1"
+                    text="highlands to your roastery" />
+                <MaskText
                     className="md:text-2xl text-center max-w-sm md:max-w-4xl px-4 text-gray-700 font-[SuisseIntl-Light] mb-4"
-                    aria-hidden="true"
-                >
-                    Hambaricho Coffee exports premium Ethiopian green beans directly
-                    from trusted producers, rooted in heritage, delivered with reliability.
-                </p>
+                    text='Hambaricho Coffee exports premium Ethiopian green beans directly
+                    from trusted producers, rooted in heritage, delivered with reliability.'
+                />
                 <Button text="ABOUT US" className="bg-primary landing-button origin-top" />
             </div>
 
