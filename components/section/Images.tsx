@@ -5,7 +5,7 @@ import { MaskText } from '../ui/MaskTextAnimation'
 const Images = () => {
 
     return (
-        <div className='detailSection flex flex-col items-center bg-secondary justify-center gap-4 md:gap-16'>
+        <div className='detailSection flex flex-col items-center bg-secondary justify-center gap-4 md:gap-16 lg:py-8'>
             <div className='w-full lg:w-4/5 h-[500px] relative'>
 
                 <div className='hidden lg:block absolute z-20 inverted-radius-bottom-right  top-0 left-0 w-full h-full bg-black/40 overflow-hidden'>

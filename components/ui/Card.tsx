@@ -16,13 +16,13 @@ type Props = {
 
 const Card = ({ image, title, origin, grade1, grade2, flavor, altitude, processing, onClick, className }: Props) => {
     return (
-        <div className={`w-[300px] flex flex-col circle-cut ${className}`} onClick={onClick}>
+        <div className={`w-[300px] h-auto flex flex-col circle-cut ${className}`} onClick={onClick}>
             <Image
                 src={image}
                 alt='Card Image hambaricho'
                 width={300}
                 height={480}
-                className='h-[50%] w-full rounded-lg object-cover'
+                className='h-[250px] w-full rounded-lg object-cover'
             />
             <div className='flex-1 p-4 rounded-lg  bg-white border-[1px] border-secondary'>
                 <p className='text-2xl text-center text-secondary uppercase font-[PPEditorialNew-Ultrabold]'>{title}</p>

@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import SmoothScrolling from "@/utils/SmoothScrolling";
+import Cursor from "@/components/ui/Cursor";
 
 
 const geistSans = Geist({
@@ -65,6 +66,7 @@ export default function RootLayout({
         `}
       >
         <SmoothScrolling>
+          {/* <Cursor /> */}
           <NavBar />
           {children}
           <Footer />

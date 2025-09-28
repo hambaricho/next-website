@@ -2,7 +2,7 @@ import Card from '../ui/Card';
 
 const coffees = [
     {
-        img: "/images/gallery.jpg",
+        img: "/images/coffee/1.jpg",
         name: "Yirgacheffe",
         origin: "Yirgacheffe Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2",
@@ -12,7 +12,7 @@ const coffees = [
         processing: "Washed, some natural",
     },
     {
-        img: "/images/gallery.jpg",
+        img: "/images/coffee/2.jpg",
         name: "Sidamo",
         origin: "Sidamo Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2 ",
@@ -22,7 +22,7 @@ const coffees = [
         processing: "Washed & natural",
     },
     {
-        img: "/images/gallery.jpg",
+        img: "/images/coffee/3.jpg",
         name: "Limu",
         origin: "Limu Zone, Ethiopia",
         grade1: "Washed - Grade 1, 2 ",
@@ -32,7 +32,7 @@ const coffees = [
         processing: "Primarily washed",
     },
     {
-        img: "/images/gallery.jpg",
+        img: "/images/coffee/4.jpg",
         name: "Guji",
         origin: "Guji Zone, Ethiopia",
         grade1: "Washed - Grade 1 and 2",
@@ -42,7 +42,7 @@ const coffees = [
         processing: "Washed & natural",
     },
     {
-        img: "/images/gallery.jpg",
+        img: "/images/coffee/5.jpg",
         name: "Jimma",
         origin: "Jimma Zone, Ethiopia",
         grade1: "Natural - Grade 4, 5",
@@ -52,7 +52,7 @@ const coffees = [
         processing: "Mostly natural, some washed",
     },
     {
-        img: "/images/gallery.jpg",
+        img: "/images/coffee/6.jpg",
         name: "Nekemte",
         origin: "Nekemte (East Wollega), Ethiopia",
         grade1: "Natural - Grade 4, 5",
@@ -62,7 +62,7 @@ const coffees = [
         processing: "Predominantly natural",
     },
     {
-        img: "/images/gallery.jpg",
+        img: "/images/coffee/7.jpg",
         name: "Harar",
         origin: "Eastern Highlands, Ethiopia",
         grade1: "Natural - Grade 4, 5, Mocha Harrar",
