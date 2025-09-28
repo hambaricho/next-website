@@ -5,16 +5,11 @@ import { MaskText } from '../ui/MaskTextAnimation'
 const Images = () => {
 
     return (
-        <div className='detailSection flex flex-col items-center bg-secondary justify-center gap-16'>
-            <div className='w-4/5 h-[500px] relative'>
+        <div className='detailSection flex flex-col items-center bg-secondary justify-center gap-4 md:gap-16'>
+            <div className='w-full lg:w-4/5 h-[500px] relative'>
 
-                <div className='absolute z-20 inverted-radius-bottom-right  top-0 left-0 w-full h-full bg-black/40 overflow-hidden'>
+                <div className='hidden lg:block absolute z-20 inverted-radius-bottom-right  top-0 left-0 w-full h-full bg-black/40 overflow-hidden'>
                 </div>
-
-                <MaskText
-                    text='From farm to cup, Hambaricho Coffee brings you premium, sustainably grown beans, handpicked with care and rooted in tradition.'
-                    className='absolute z-20 bottom-8 left-8 text-white text-2xl font-bold font-[SuisseIntl-Regular] max-w-sm md:max-w-xl'
-                />
 
                 <Image
                     src={"/images/natural.webp"}
@@ -38,16 +33,15 @@ const Images = () => {
                     alt="gallery image hambaricho"
                     width={400}
                     height={400}
-                    className='block lg:hidden w-full h-full inverted-radius-bottom-right object-cover rounded-[4rem]'
+                    className='block lg:hidden w-full h-3/4 mb-4 lg:h-full object-cover rounded-[4rem]'
 
+                />
+                <MaskText
+                    text='From farm to cup, Hambaricho Coffee brings you premium, sustainably grown beans, handpicked with care and rooted in tradition.'
+                    className='lg:absolute z-20 bottom-8 left-8 text-white md:text-2xl font-bold font-[SuisseIntl-Regular] max-w-sm md:max-w-xl pl-4'
                 />
             </div>
-            <div className='w-4/5 h-[500px] relative'>
-
-                <MaskText
-                    text='Explore our selection of green beans, roasted coffee, and premium blends — crafted for quality, freshness, and flavor.'
-                    className='absolute z-20 bottom-8 right-8 text-white text-right text-2xl font-bold font-[SuisseIntl-Regular] max-w-sm md:max-w-xl'
-                />
+            <div className='lg:w-4/5 h-[500px] relative'>
 
                 <Image
                     src={"/images/logoWithText.webp"}
@@ -70,7 +64,11 @@ const Images = () => {
                     alt="Ethiopian coffee beans hambaricho"
                     width={400}
                     height={400}
-                    className='block lg:hidden w-full h-full inverted-radius-top-left-small object-cover rounded-[4rem]'
+                    className='block lg:hidden w-full h-3/4 mb-4 object-cover rounded-[4rem]'
+                />
+                <MaskText
+                    text='Explore our selection of green beans, roasted coffee, and premium blends — crafted for quality, freshness, and flavor.'
+                    className='lg:absolute z-20 bottom-8 right-8 text-white lg:text-right md:text-2xl font-bold font-[SuisseIntl-Regular] max-w-sm md:max-w-xl pl-4'
                 />
             </div>
         </div>

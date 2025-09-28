@@ -17,12 +17,6 @@ interface MaskTextProps {
     from?: 'bottom' | 'top' | 'left' | 'right'; // direction of the reveal
 }
 
-/**
- * MaskText
- * - text: the sentence (can include newlines \n)
- * - split: 'words' (default) | 'chars' | 'lines' (lines uses '\n')
- * - tag: semantic tag like 'p', 'h1' (defaults to 'p')
- */
 export function MaskText({
     text,
     split = 'words',
@@ -34,7 +28,7 @@ export function MaskText({
     from = 'bottom',
 }: MaskTextProps) {
     const rootRef = useRef<HTMLDivElement | null>(null);
-    const inView = useInView(rootRef, { once, margin: '0px 0px -10% 0px' });
+    const inView = useInView(rootRef, { once, margin: '0px 0px 10% 0px' });
 
     // ✅ Hooks must run unconditionally (moved before any return)
     const tokens = useMemo(() => {
