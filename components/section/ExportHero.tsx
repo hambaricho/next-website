@@ -28,7 +28,7 @@ export default function ExportHero() {
             </div>
 
             {/* Bottom zigzag border */}
-            <div className="absolute -bottom-8 md:-bottom-16 -z-0 left-0 w-full translate-y-1 rotate-180">
+            <div className="hidden lg:flex absolute -bottom-8 md:-bottom-16 -z-0 left-0 w-full translate-y-1 rotate-180">
                 <Image src="/images/greenBg.svg" alt="zigzag border" width={1600} height={80} className="w-full select-none pointer-events-none" />
             </div>
         </section>

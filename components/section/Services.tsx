@@ -259,7 +259,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
             {/* Indicator */}
             <div
               ref={indicatorRef}
-              className="absolute justify-between items-center top-0 left-20 w-[34px] h-[34px] md:h-[32px] bg-white -z-10 transform translate-y-0 hidden lg:flex"
+              className="absolute justify-between items-center top-0 left-20 w-[34px] h-[34px] md:h-[32px] bg-white -z-10 transform translate-y-0 hidden md:flex "
             >
               <Coffee className='text-primary w-6 h-6'/>
               <Coffee className='text-primary w-6 h-6'/>
@@ -311,7 +311,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
           <div className="w-[100%] md:w-[60%]">
             <p
               ref={serviceCopyRef}
-              className="font-[SuisseIntl-Light] text-xl text-white"
+              className="font-[SuisseIntl-Light] md:text-xl text-white"
             >
               {servicesCopy[0][0]}
             </p>
@@ -319,7 +319,7 @@ const CrftdComponent: React.FC<CrftdComponentProps> = ({ className = "" }) => {
         </div>
 
         {/* Progress Bar */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] md:rotate-0 w-2 rounded h-[50%] md:h-[60%] bg-white">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] md:rotate-0 w-0 md:w-2 rounded h-[50%] md:h-[60%] bg-white">
           <div
             ref={progressRef}
             className="absolute top-0 left-0 w-full h-full rounded bg-primary origin-top transform scale-y-0 will-change-transform"
