@@ -85,6 +85,7 @@
 @theme {
   --color-primary: #94c35f;
   --color-secondary: #232321;
+  --color-greenSecondary: #077551;
 }
 
 @media (prefers-color-scheme: dark) {

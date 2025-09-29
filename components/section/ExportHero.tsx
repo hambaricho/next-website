@@ -10,12 +10,10 @@ export default function ExportHero() {
                 <Image src="/images/greenBg.svg" alt="zigzag border" width={1600} height={80} className="w-full select-none pointer-events-none" />
             </div>
 
-            {/* Organic badge/logo */}
             <div className="mt- mb-6 flex justify-center relative z-10">
                 <Image src="/images/organic.webp" alt="Organic badge" width={120} height={120} className="mx-auto" />
             </div>
 
-            {/* Main content */}
             <div className="max-w-3xl mx-auto text-center relative z-10">
                 <h1 className="text-5xl md:text-7xl font-[SuisseIntl-Bold] text-white">
                     Global Reach<br />
