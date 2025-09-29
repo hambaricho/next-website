@@ -66,7 +66,6 @@ export default function RootLayout({
         `}
       >
         <SmoothScrolling>
-          {/* <Cursor /> */}
           <NavBar />
           {children}
           <Contact />

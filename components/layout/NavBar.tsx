@@ -1,11 +1,12 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
 const navLinks = [
   { name: "Products", href: "#products" },
-  { name: "Export", href: "#export" },
-  { name: "Contact", href: "#contact" }
+  { name: "Export", href: "/services" },
+  { name: "Our Story", href: "/story" }
 ]
 
 const NavBar = () => {
@@ -22,12 +23,11 @@ const NavBar = () => {
   return (
     <div className="w-full bg-gray-100 pt-2">
       <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-2 bg-gray-200">
-        {/* Left: Logo */}
-        <div className="flex items-center gap-2">
-          <Image src="/images/footerLogo.svg" alt="Logo" width={40} height={40} />
-        </div>
 
-        {/* Center: Nav Links */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/images/footerLogo.svg" alt="Logo" width={40} height={40} />
+        </Link>
+
         <div className="hidden md:flex gap-8 items-center">
           {navLinks.map(link => (
             <a

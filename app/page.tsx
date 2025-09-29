@@ -1,5 +1,4 @@
 import Cards from "@/components/section/Cards";
-import Contact from "@/components/section/Contact";
 import Images from "@/components/section/Images";
 import Landing from "@/components/section/Landing";
 import CrftdComponent from "@/components/section/Services";
@@ -66,7 +65,6 @@ export default function Home() {
       <Images />
       <CrftdComponent />
       <ExportHero />
-      <Contact />
     </div>
   );
 }
