@@ -114,13 +114,13 @@ const Landing = () => {
                 {/* Animated versions */}
 
                 <AnimatedHeader as="h1"
-                    className="text-4xl md:text-6xl text-center max-w-[870px] px-4 uppercase text-secondary font-[SuisseIntl-Bold] mb-1"
+                    className="text-4xl md:text-6xl text-center max-w-[870px] px-4 uppercase text-secondary dark:text-gray-100 font-[SuisseIntl-Bold] mb-1"
                     text="From Ethiopia&lsquo;s" />
                 <AnimatedHeader as="h1"
-                    className="text-4xl md:text-6xl text-center max-w-8xl px-4 uppercase text-secondary font-[SuisseIntl-Bold] mb-1"
+                    className="text-4xl md:text-6xl text-center max-w-8xl px-4 uppercase text-secondary dark:text-gray-100 font-[SuisseIntl-Bold] mb-1"
                     text="highlands to your roastery" />
                 <MaskText
-                    className="md:text-2xl text-center max-w-sm md:max-w-4xl px-4 text-gray-700 font-[SuisseIntl-Light] mb-4"
+                    className="md:text-2xl text-center max-w-sm md:max-w-4xl px-4 text-gray-700 dark:text-gray-300 font-[SuisseIntl-Light] mb-4"
                     text='Hambaricho Coffee exports premium Ethiopian green beans directly
                     from trusted producers, rooted in heritage, delivered with reliability.'
                 />

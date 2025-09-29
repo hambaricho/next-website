@@ -11,9 +11,11 @@ import Matter, {
     MouseConstraint,
     Events,
 } from "matter-js";
+import { useTheme } from "../context/ThemeContext";
 
 const CapsulePhysics = () => {
     const sceneRef = useRef<HTMLDivElement>(null);
+    const {theme} = useTheme();
 
     useEffect(() => {
         if (!sceneRef.current) return;
@@ -32,7 +34,7 @@ const CapsulePhysics = () => {
                 width,
                 height,
                 wireframes: false,
-                background: "#232321",
+                background: theme === "dark" ? "#232321" : "#077551",
             },
         });
 
@@ -193,7 +195,7 @@ const CapsulePhysics = () => {
         };
     }, []);
 
-    return <div ref={sceneRef} className="w-full" />;
+    return <div ref={sceneRef} className="w-full bg-greenSecondary dark:bg-secondary" />;
 };
 
 export default CapsulePhysics;

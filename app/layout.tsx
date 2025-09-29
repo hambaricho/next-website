@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import SmoothScrolling from "@/utils/SmoothScrolling";
 import Contact from "@/components/section/Contact";
 import { Analytics } from "@vercel/analytics/next"
+import { Providers } from "@/utils/Transition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,15 +67,17 @@ export default function RootLayout({
           antialiased
         `}
       >
-        <ThemeProvider>
-          <SmoothScrolling>
-            <NavBar />
-            {children}
-            <Contact />
-            <Footer />
-          </SmoothScrolling>
-          <Analytics />
-        </ThemeProvider>
+        <Providers>
+          <ThemeProvider>
+            <SmoothScrolling>
+              <NavBar />
+              {children}
+              <Contact />
+              <Footer />
+            </SmoothScrolling>
+            <Analytics />
+          </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
