@@ -44,9 +44,8 @@ export const metadata: Metadata = {
 
 const page = () => {
     return (
-        <main className="w-full min-h-screen bg-white">
+        <main className="w-full min-h-screen bg-gray-100">
             <div className="flex flex-col items-center px-4 py-12 md:px-8 lg:px-16 max-w-7xl mx-auto">
-
 
                 <section className="text-center mb-16">
                     <AnimatedHeader as='h1' text='THE LAND OF' className='font-[SuisseIntl-Bold] text-6xl md:text-8xl text-greenSecondary' />
@@ -146,7 +145,7 @@ const page = () => {
                 </p>
             </div>
 
-            <div className='md:h-[70dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-white py-12'>
+            <div className='md:h-[70dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-gray-100 py-12'>
                 <p className='text-greenSecondary font-[SuisseIntl-Bold] max-w-4xl text-5xl md:text-8xl text-center mx-auto'>
                     Ready to Partner with Purpose?
                 </p>
