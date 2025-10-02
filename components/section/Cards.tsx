@@ -8,78 +8,141 @@ import { MaskText } from "../ui/MaskTextAnimation";
 import CardsMobile from "./CardsMobile";
 
 
-const coffees = [
+const coffeeData = [
     {
         img: "/images/coffee/1.jpg",
         name: "Yirgacheffe",
-        origin: "Yirgacheffe Zone, Ethiopia",
-        grade1: "Washed - Grade 1, 2",
-        grade2: "Natural - Grade 1, 2, 3",
-        flavor: "Floral, citrus, tea-like",
-        altitude: "1,700–2,200m",
-        processing: "Washed, some natural",
+        origin: "Southern Ethiopia, high-altitude plantations (4,900–7,225 ft)",
+        grade1: "Washed: Sidamo Grade 1 & 2",
+        grade2: "Natural: Sidamo Grade 2, 3, 4, UG",
+        flavor: "Delicate & Elegant – tea-like body with floral aromas. Washed Process – enhances clarity and brightness. World-Renowned – one of Ethiopia’s most celebrated coffees.",
+        altitude: "1,800–2,200 m",
+        processing: "Washed & Natural",
+        body: "Light to medium, tea-like",
+        acidity: "9/10 (floral, lemony, very lively)",
+        weight: "Light",
+        available: "Washed: Sidamo Grade 1 & 2 | Natural: Sidamo Grade 2, 3, 4, UG",
+        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
+        garbling: "Clean",
+        shelfLife: "6–9 months",
+        description: "Celebrated worldwide, Yirgacheffe coffee comes from Ethiopia’s lush mountains and is carefully washed for clarity. Expect delicate floral notes, bright citrus flavors, and a tea-like body — a refined and elegant brew for true coffee enthusiasts.",
+        loadability: "20ft container: 320 bags / 19,200 kg"
     },
     {
         img: "/images/coffee/2.jpg",
         name: "Sidamo",
-        origin: "Sidamo Zone, Ethiopia",
-        grade1: "Washed - Grade 1, 2 ",
-        grade2: "Natural - Grade 2, 3, 4",
-        flavor: "Fruity, balanced, chocolate hints",
-        altitude: "1,500–2,200m",
-        processing: "Washed & natural",
+        origin: "Yirgacheffe, Southern Ethiopia (high-altitude 5,900–7,200 ft)",
+        grade1: "Washed: Yirgacheffe Grade 1 & 2",
+        grade2: "Natural: Yirgacheffe Grade 3, 4, UG",
+        flavor: "Bright & Floral – citrus and jasmine notes. High-Altitude Growth – slow-grown for rich flavor. Balanced Cup – smooth body with elegant acidity.",
+        altitude: "1,500–2,200 m",
+        processing: "Washed & Natural",
+        body: "Medium, smooth",
+        acidity: "7/10 (bright, citrusy)",
+        weight: "Medium",
+        available: "Washed: Yirgacheffe Grade 1 & 2 | Natural: Yirgacheffe Grade 3, 4, UG",
+        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
+        garbling: "Clean",
+        shelfLife: "6–9 months",
+        description: "Grown in the highlands of southern Ethiopia, Sidamo coffee is handpicked for its exceptional quality. This coffee offers bright acidity, floral aromas, and hints of citrus and jasmine, delivering a smooth and balanced cup that represents Ethiopia’s rich coffee heritage.",
+        loadability: "20ft container: 320 bags / 19,200 kg"
     },
     {
         img: "/images/coffee/3.jpg",
         name: "Limu",
-        origin: "Limu Zone, Ethiopia",
-        grade1: "Washed - Grade 1, 2 ",
-        grade2: "Natural - Grade 3, 4",
-        flavor: "Spicy, winey, soft acidity",
-        altitude: "1,100–1,900m",
-        processing: "Primarily washed",
+        origin: "Western Ethiopia (1,300–1,900 m)",
+        grade1: "Washed: Limu Grade 2",
+        grade2: "Natural: Limu Grade 3, 4, UG",
+        flavor: "Chocolatey & Well-Rounded – lingering, satisfying finish. Subtle Fruit & Spice – vibrant yet refined flavor. Southwestern Highlands – high-altitude, wet-processed quality.",
+        altitude: "1,500–2,000 m",
+        processing: "Washed & Natural",
+        body: "Medium, balanced",
+        acidity: "6/10 (sweet, subtle spice)",
+        weight: "Medium",
+        available: "Washed: Limu Grade 2 | Natural: Limu Grade 3, 4, UG",
+        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
+        garbling: "Clean",
+        shelfLife: "6–9 months",
+        description: "Cultivated in the southwestern highlands, Limu coffee is known for its well-rounded body, chocolatey richness, subtle fruity and spice notes, and a lingering finish. A clean, vibrant cup that highlights Ethiopia’s premium coffee quality.",
+        loadability: "20ft container: 320 bags / 19,200 kg"
     },
     {
         img: "/images/coffee/4.jpg",
         name: "Guji",
-        origin: "Guji Zone, Ethiopia",
-        grade1: "Washed - Grade 1 and 2",
-        grade2: "Natural - Grade 2, 3, 4, UG",
-        flavor: "Fruity, floral, berry notes",
-        altitude: "1,500–2,350m",
-        processing: "Washed & natural",
+        origin: "Guji Zone, Southern Ethiopia (5,900–7,200 ft)",
+        grade1: "Washed: Guji Grade 1 & 2",
+        grade2: "Natural: Guji Grade 2, 3, 4, UG",
+        flavor: "Fruity & Complex – berry and tropical notes. Specialty Coffee Region – emerging hotspot for premium beans. Vibrant Character – lively and memorable cup.",
+        altitude: "1,600–2,200 m",
+        processing: "Washed & Natural",
+        body: "Medium, velvety",
+        acidity: "8/10 (fruity-sweet, complex)",
+        weight: "Medium",
+        available: "Washed: Guji Grade 1 & 2 | Natural: Guji Grade 2, 3, 4, UG",
+        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
+        garbling: "Clean",
+        shelfLife: "6–9 months",
+        description: "From the fertile Guji region, these beans are known for their vibrant, fruity sweetness and complex flavors, often featuring berry and tropical fruit notes. Guji coffee offers a lively, memorable cup with rich Ethiopian character.",
+        loadability: "20ft container: 320 bags / 19,200 kg"
     },
     {
         img: "/images/coffee/5.jpg",
         name: "Jimma",
-        origin: "Jimma Zone, Ethiopia",
-        grade1: "Natural - Grade 4, 5",
-        grade2: "Washed - Grade 3",
-        flavor: "Earthy, full-bodied, mild fruit",
-        altitude: "1,400–2,100m",
-        processing: "Mostly natural, some washed",
+        origin: "Jimma Zone, Oromia Region (sun-dried, 1,400–2,000 m)",
+        grade1: "Natural: Jimma Grade 4, 5, UG",
+        grade2: "",
+        flavor: "Nutty & Chocolatey – smooth, approachable flavor. Rustic Profile – versatile for blends or single-origin. Western Highlands Origin – earthy Ethiopian character.",
+        altitude: "1,350–2,000 m",
+        processing: "Natural (Dry-Processed)",
+        body: "Medium, rustic",
+        acidity: "4/10 (nutty, smooth, low brightness)",
+        weight: "Medium-heavy",
+        available: "Natural: Jimma Grade 4, 5, UG",
+        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
+        garbling: "Clean",
+        shelfLife: "6–9 months",
+        description: "Jimma coffee comes from western Ethiopia and delivers a rustic, smooth cup with nutty and chocolatey flavors. Its well-rounded profile makes it versatile — perfect for blends or as a standalone brew.",
+        loadability: "20ft container: 320 bags / 19,200 kg"
     },
     {
         img: "/images/coffee/6.jpg",
         name: "Nekemte",
-        origin: "Nekemte (East Wollega), Ethiopia",
-        grade1: "Natural - Grade 4, 5",
-        grade2: "Washed - Grade 2, 3",
-        flavor: "Sweet, fruity, winey with spice",
-        altitude: "1,700–2,200m",
-        processing: "Predominantly natural",
+        origin: "Wollega (Nekemte) region, Western Ethiopia",
+        grade1: "Natural: Lekempti Grade 4, 5, UG",
+        grade2: "",
+        flavor: "Sweet & Fruity – subtle fruity tones with medium body. Balanced & Approachable – ideal for everyday enjoyment. Western Ethiopia Grown – premium highland coffee.",
+        altitude: "1,500–2,000 m",
+        processing: "Natural (Dry-Processed)",
+        body: "Medium, round",
+        acidity: "5/10 (mild fruitiness)",
+        weight: "Medium",
+        available: "Natural: Lekempti Grade 4, 5, UG",
+        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
+        garbling: "Clean",
+        shelfLife: "6–9 months",
+        description: "Grown in Ethiopia’s western highlands, Nekemte coffee is sweet, medium-bodied, and lightly fruity, offering a balanced and approachable cup. Its smooth flavor makes it a satisfying choice for everyday enjoyment.",
+        loadability: "20ft container: 320 bags / 19,200 kg"
     },
     {
         img: "/images/coffee/7.jpg",
-        name: "Harar",
-        origin: "Eastern Highlands, Ethiopia",
-        grade1: "Natural - Grade 4, 5, Mocha Harrar",
-        flavor: "Bold, winey, chocolatey",
-        altitude: "1,400–2,000m",
-        processing: "Sun-dried (natural)",
+        name: "Harrar",
+        origin: "Harari Region, Eastern Ethiopia (sun-dried at 4,900–6,200 ft)",
+        grade1: "Natural: Harrar Grade 2, 3, 4, 5, UG",
+        grade2: "",
+        flavor: "Bold & Full-Bodied – strong, earthy flavor. Wild Berry & Chocolate Notes – unique wine-like profile. Traditional Dry-Processed – classic Ethiopian heritage.",
+        altitude: "1,400–1,900 m",
+        processing: "Natural (Dry-Processed)",
+        body: "Full, heavy",
+        acidity: "5/10 (wine-like, mild)",
+        weight: "Heavy",
+        available: "Natural: Harrar Grade 2, 3, 4, 5, UG",
+        packaging: "30 Kg, 50 Kg, 60 Kg Bulk Bags (Jute or Polypropylene)",
+        garbling: "Clean",
+        shelfLife: "6–9 months",
+        description: "One of Ethiopia’s oldest coffee regions, Harrar produces bold, full-bodied beans with wild berry, chocolate, and wine-like notes. Naturally processed, it has a distinct earthy character and a powerful, traditional flavor.",
+        loadability: "20ft container: 320 bags / 19,200 kg"
     },
 ];
-
 
 const cardLayout = [
     { x: -300, y: 25, rotation: -8, z: 10 },
@@ -208,8 +271,8 @@ export default function Page() {
         const currentCard = cards[activeIndex] as HTMLElement;
         const newIndex =
             direction === "next"
-                ? (activeIndex + 1) % coffees.length
-                : (activeIndex - 1 + coffees.length) % coffees.length;
+                ? (activeIndex + 1) % coffeeData?.length
+                : (activeIndex - 1 + coffeeData?.length) % coffeeData?.length;
         const nextCard = cards[newIndex] as HTMLElement;
         const { x, y, rotation, z } = cardLayout[activeIndex];
         gsap.to(currentCard, {
@@ -231,7 +294,7 @@ export default function Page() {
 
     return (
         <>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center relative z-30">
                 <p className="text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white">
                     Our Coffee
                 </p>
@@ -258,7 +321,7 @@ export default function Page() {
                     onClick={closeActive}
                 />
 
-                {coffees.map((coffee, i) => (
+                {coffeeData.map((coffee, i) => (
                     <Card
                         key={i}
                         image={coffee.img}
@@ -267,7 +330,6 @@ export default function Page() {
                         origin={coffee.origin}
                         grade1={coffee.grade1}
                         grade2={coffee.grade2!}
-                        flavor={coffee.flavor}
                         altitude={coffee.altitude}
                         processing={coffee.processing}
                         className="card hidden lg:block absolute cursor-pointer" />

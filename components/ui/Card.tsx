@@ -7,7 +7,7 @@ type Props = {
     origin: string
     grade1: string
     grade2: string
-    flavor: string
+    flavor?: string
     altitude: string
     processing: string
     onClick?: () => void
@@ -38,7 +38,9 @@ const Card = ({ image, title, origin, grade1, grade2, flavor, altitude, processi
                             </span>
                         }
                     </li>
-                    <li><span className='font-[SuisseIntl-Regular] text-black'>Flavor:</span> {flavor}</li>
+                    {flavor && (
+                        <li><span className='font-[SuisseIntl-Regular] text-black'>Flavor:</span> {flavor}</li>
+                    )}
                     <li><span className='font-[SuisseIntl-Regular] text-black'>Altitude:</span> {altitude}</li>
                     <li><span className='font-[SuisseIntl-Regular] text-black'>Processing:</span> {processing}</li>
                 </ul>

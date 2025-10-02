@@ -2,6 +2,7 @@
 import { useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import ServiceCard from '../ui/ServiceCard/ServiceCard';
+import { AnimatedHeader } from '../ui/AnimatedHeader';
 
 const services = [
     {
@@ -51,7 +52,9 @@ const Service = () => {
 
     return (
         <div ref={container} className={`bg-secondary relative z-30 lg:py-24`}>
-
+            <AnimatedHeader as="h4"
+                className="text-4xl md:text-6xl text-center mx-auto px-4 uppercase text-gray-100 relative z-30 font-[SuisseIntl-Bold]"
+                text="Our Sectorial Services" />
             {
                 services.map((service, i) => {
                     const targetScale = 1 - ((services.length - i) * 0.05);

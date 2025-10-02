@@ -100,7 +100,7 @@ const Landing = () => {
 
     return (
         <div ref={containerRef} className="min-h-[90dvh] md:min-h-[160dvh] relative z-10 flex flex-col items-center bg-gray-100 dark:bg-primary-dark
-         pt-24 md:pt-32 overflow-hidden">
+         pt-24 md:pt-40 overflow-hidden">
             <div ref={textRef} className="text-center z-20 relative flex flex-col items-center">
                 {/* Screen reader only versions */}
                 <h1 className="sr-only">
