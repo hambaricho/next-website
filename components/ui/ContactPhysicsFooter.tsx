@@ -193,9 +193,9 @@ const CapsulePhysics = () => {
             Engine.clear(engine);
             render.canvas.remove();
         };
-    }, []);
+    }, [theme]);
 
-    return <div ref={sceneRef} className="w-full bg-greenSecondary dark:bg-secondary" />;
+    return <div ref={sceneRef} className={`w-full ${theme === 'dark' ? 'bg-secondary' : 'bg-greenSecondary'}`} />;
 };
 
 export default CapsulePhysics;

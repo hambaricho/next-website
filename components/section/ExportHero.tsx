@@ -4,7 +4,7 @@ import Button from "../ui/Button"
 
 export default function ExportHero() {
     return (
-        <section className="relative z-30 flex flex-col items-center justify-center md:min-h-[80vh] bg-primary px-4 py-12 md:py-20">
+        <section className="relative z-30 flex flex-col items-center justify-center md:min-h-[100dvh] bg-primary px-4 py-12 md:py-20">
             {/* Top zigzag border */}
             <div className="hidden md:block absolute -top-4 md:-top-16 left-0  w-full -translate-y-1">
                 <Image src="/images/greenBg.svg" alt="zigzag border" width={1600} height={80} className="w-full select-none pointer-events-none" />
@@ -22,7 +22,7 @@ export default function ExportHero() {
                 <p className="text-base md:text-lg font-[SuisseIntl-Light] text-white/90 mb-4 mt-4">
                     We bridge the distance with seamless global logistics. Our expert team manages the entire export process from meticulous documentation to bespoke packaging, ensuring your coffee arrives with its quality and story intact.
                 </p>
-                <Button text="Place Your Order" className="px-6 py-3 bg-secondary text-white font-[SuisseIntl-Regular]" />
+                <Button text="Place Your Order" className="px-6 py-3 bg-secondary border border-white text-white font-[SuisseIntl-Regular]" />
             </div>
 
             {/* Bottom zigzag border */}

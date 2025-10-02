@@ -1,7 +1,7 @@
 "use client"
-import React, { useRef } from 'react'
-import ServiceCard from '../ui/ServiceCard/ServiceCard';
 import { useScroll } from 'framer-motion';
+import { useRef } from 'react';
+import ServiceCard from '../ui/ServiceCard/ServiceCard';
 
 const services = [
     {
@@ -48,9 +48,10 @@ const Service = () => {
         target: container,
         offset: ['start start', 'end end']
     })
-    
+
     return (
-        <div ref={container} className={"bg-secondary relative z-30"}>
+        <div ref={container} className={`bg-secondary relative z-30 lg:py-24`}>
+
             {
                 services.map((service, i) => {
                     const targetScale = 1 - ((services.length - i) * 0.05);

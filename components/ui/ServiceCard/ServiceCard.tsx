@@ -25,8 +25,8 @@ const ServiceCard = ({ title, copy, img, i, progress, range, targetScale }: Serv
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    // On mobile, reduce the scale effect for better readability
-    const mobileTargetScale = 1 - ((7 - i) * 0.02); // Smaller scale difference on mobile
+
+    const mobileTargetScale = 1 - ((7 - i) * 0.02);
     const finalTargetScale = isMobile ? mobileTargetScale : targetScale;
     
     const scale = useTransform(progress, range, [1, finalTargetScale]);
@@ -41,7 +41,7 @@ const ServiceCard = ({ title, copy, img, i, progress, range, targetScale }: Serv
     return (
         <div ref={container} className="cardContainer">
             <motion.div
-                className="card bg-primary-dark border border-white"
+                className="card bg-secondary border border-white"
                 style={{ 
                     scale, 
                     top: isMobile ? `calc(-2vh + ${i * 15}px)` : `calc(-5vh + ${i * 25}px)` 

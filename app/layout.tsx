@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/context/ThemeContext";
+import NavBar from "@/components/layout/NavBar";
+import Contact from "@/components/section/Contact";
+import SmoothScrolling from "@/utils/SmoothScrolling";
+import { Providers } from "@/utils/Transition";
+import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/layout/NavBar";
-import Footer from "@/components/layout/Footer";
-import SmoothScrolling from "@/utils/SmoothScrolling";
-import Contact from "@/components/section/Contact";
-import { Analytics } from "@vercel/analytics/next"
-import { Providers } from "@/utils/Transition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,7 +72,6 @@ export default function RootLayout({
               <NavBar />
               {children}
               <Contact />
-              <Footer />
             </SmoothScrolling>
             <Analytics />
           </ThemeProvider>

@@ -6,6 +6,7 @@ import Card from "../ui/Card";
 import CardsMobile from "./CardsMobile";
 import { AnimatedHeader } from "../ui/AnimatedHeader";
 import { MaskText } from "../ui/MaskTextAnimation";
+import Button from "../ui/Button";
 
 
 const coffees = [
@@ -300,6 +301,8 @@ export default function Page() {
                         </button>
                     </>
                 )}
+
+                {/* <Button text="View Catalog" className="px-6 py-3 bg-primary border border-white text-white font-[SuisseIntl-Regular] absolute bottom-0" /> */}
             </div>
         </>
     );
