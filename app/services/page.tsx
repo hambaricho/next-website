@@ -61,7 +61,7 @@ const steps = [
 const page = () => {
 
     return (
-        <main className="min-h-screen bg-gray-100 ">
+        <main className="min-h-screen bg-gray-100 pt-28 pb-10">
             <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-16 py-12">
                 <header className="text-center mb-16">
                     <p className="font-[PPEditorialNew-Italic] text-lg text-greenSecondary">

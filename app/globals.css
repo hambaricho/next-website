@@ -103,6 +103,37 @@
   --foreground: #ededed;
 }
 
+/* Swiper Catalog Styles */
+.catalog-swiper {
+  padding: 50px 0 !important;
+}
+
+.catalog-swiper .swiper-slide {
+  transition: all 0.3s ease;
+}
+
+.catalog-swiper .swiper-slide-active {
+  transform: scale(1.1) !important;
+}
+
+/* Hide default navigation buttons */
+.catalog-swiper .swiper-button-next,
+.catalog-swiper .swiper-button-prev {
+  display: none !important;
+}
+
+.catalog-swiper .swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+}
+
+.catalog-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #94c35f !important;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

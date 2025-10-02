@@ -2,11 +2,10 @@
 import { gsap } from "gsap";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import Card from "../ui/Card";
-import CardsMobile from "./CardsMobile";
 import { AnimatedHeader } from "../ui/AnimatedHeader";
+import Card from "../ui/Card";
 import { MaskText } from "../ui/MaskTextAnimation";
-import Button from "../ui/Button";
+import CardsMobile from "./CardsMobile";
 
 
 const coffees = [

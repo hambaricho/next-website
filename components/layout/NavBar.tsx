@@ -6,17 +6,15 @@ import Audio from "../ui/Audio"
 import { Moon, Sun } from "lucide-react"
 
 const navLinks = [
-  { name: "Products", href: "#products" },
+  { name: "Catalog", href: "/catalog" },
   { name: "Export", href: "/services" },
   { name: "Our Story", href: "/story" }
 ]
 
-
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme()
   return (
-    <div className="w-full bg-gray-100 dark:bg-primary-dark pt-2">
-      <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-2 bg-gray-200 dark:bg-secondary">
+      <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-2 bg-gray-200 z-40 absolute top-4 left-1/2 -translate-x-1/2 shadow-lg">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/images/footerLogo.svg" alt="Logo" width={40} height={40} />
         </Link>
@@ -25,7 +23,7 @@ const NavBar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-lg font-[SuisseIntl-Light] px-4 py-2 rounded transition-colors text-secondary dark:text-gray-100"
+              className="text-lg font-[SuisseIntl-Light] px-4 py-2 rounded transition-colors text-secondary"
             >
               {link.name}
             </a>
@@ -44,7 +42,6 @@ const NavBar = () => {
           </button>
         </div>
       </nav>
-    </div>
   )
 }
 
