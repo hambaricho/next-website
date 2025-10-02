@@ -15,8 +15,8 @@ const navLinks = [
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme()
   return (
-    <div className="w-full bg-gray-100 dark:bg-secondary pt-2">
-      <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-2 bg-gray-200 dark:bg-black">
+    <div className="w-full bg-gray-100 dark:bg-primary-dark pt-2">
+      <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-2 bg-gray-200 dark:bg-secondary">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/images/footerLogo.svg" alt="Logo" width={40} height={40} />
         </Link>

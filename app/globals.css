@@ -84,6 +84,7 @@
 
 @theme {
   --color-primary: #94c35f;
+  --color-primary-dark: #077551;
   --color-secondary: #232321;
   --color-greenSecondary: #077551;
 }

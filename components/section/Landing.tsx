@@ -1,14 +1,13 @@
 "use client"
-import { useRef } from "react"
+import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 import Image from "next/image"
-import Button from "../ui/Button"
-import { useGSAP } from "@gsap/react"
-import SVGLine from "../ui/SVGLine"
-import { MaskText } from "../ui/MaskTextAnimation"
+import { useRef } from "react"
 import { AnimatedHeader } from "../ui/AnimatedHeader"
+import Button from "../ui/Button"
+import SVGLine from "../ui/SVGLine"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -100,7 +99,8 @@ const Landing = () => {
 
 
     return (
-        <div ref={containerRef} className="min-h-[90dvh] md:min-h-[160dvh] relative z-10 flex flex-col items-center bg-gray-100 dark:bg-secondary pt-24 md:pt-32 overflow-hidden">
+        <div ref={containerRef} className="min-h-[90dvh] md:min-h-[160dvh] relative z-10 flex flex-col items-center bg-gray-100 dark:bg-primary-dark
+         pt-24 md:pt-32 overflow-hidden">
             <div ref={textRef} className="text-center z-20 relative flex flex-col items-center">
                 {/* Screen reader only versions */}
                 <h1 className="sr-only">
@@ -119,11 +119,10 @@ const Landing = () => {
                 <AnimatedHeader as="h1"
                     className="text-4xl md:text-6xl text-center max-w-8xl px-4 uppercase text-secondary dark:text-gray-100 font-[SuisseIntl-Bold] mb-1"
                     text="highlands to your roastery" />
-                <MaskText
-                    className="md:text-2xl text-center max-w-sm md:max-w-4xl px-4 text-gray-700 dark:text-gray-300 font-[SuisseIntl-Light] mb-4"
-                    text='Hambaricho Coffee exports premium Ethiopian green beans directly
-                    from trusted producers, rooted in heritage, delivered with reliability.'
-                />
+                <p className="md:text-2xl text-center max-w-sm md:max-w-4xl px-4 text-gray-700 dark:text-gray-300 font-[SuisseIntl-Light] mb-4">
+                    Hambaricho Coffee exports premium Ethiopian green beans directly
+                    from trusted producers, rooted in heritage, delivered with reliability.
+                </p>
                 <Button text="ABOUT US" className="bg-primary landing-button origin-top" />
             </div>
 

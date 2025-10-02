@@ -1,8 +1,8 @@
 import Cards from "@/components/section/Cards";
+import ExportHero from "@/components/section/ExportHero";
 import Images from "@/components/section/Images";
 import Landing from "@/components/section/Landing";
-import CrftdComponent from "@/components/section/Services";
-import ExportHero from "@/components/section/ExportHero";
+import Service from "@/components/section/Service";
 import SVGLine from "@/components/ui/SVGLine";
 import type { Metadata } from "next";
 
@@ -63,7 +63,7 @@ export default function Home() {
         <Cards />
       </div>
       <Images />
-      <CrftdComponent />
+      <Service />
       <ExportHero />
     </div>
   );
