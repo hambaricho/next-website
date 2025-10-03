@@ -48,8 +48,8 @@ const page = () => {
             <div className="flex flex-col items-center px-4 py-12 md:px-8 lg:px-16 max-w-7xl mx-auto">
 
                 <section className="text-center mb-16">
-                    <AnimatedHeader as='h1' text='THE LAND OF' className='font-[SuisseIntl-Bold] text-6xl md:text-8xl text-greenSecondary dark:text-white' />
-                    <AnimatedHeader as='h1' text='COFFEE' className='font-[PPEditorialNew-Italic] text-6xl md:text-8xl text-greenSecondary' />
+                    <AnimatedHeader as='h1' text='THE LAND OF' className='font-[SuisseIntl-Bold] text-5xl md:text-8xl text-greenSecondary dark:text-white' />
+                    <AnimatedHeader as='h1' text='COFFEE' className='font-[PPEditorialNew-Italic] text-5xl md:text-8xl text-greenSecondary' />
                 </section>
 
                 {/* Our Story */}
@@ -63,13 +63,13 @@ const page = () => {
                         />
                     </div>
                     <div>
-                        <h3 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary dark:text-white mb-2">
+                        <h3 className="font-[SuisseIntl-Bold] text-4xl md:text-5xl text-greenSecondary dark:text-white mb-2">
                             OUR STORY
                         </h3>
                         <div className="h-[1.5px] bg-greenSecondary w-full mb-4"></div>
                         <p className="text-greenSecondary dark:text-white font-[SuisseIntl-Light] leading-relaxed">
                             Coffee is not just a crop in Ethiopia, it is a way of life. At{" "}
-                            <span className="font-semibold">HambariCho Coffee</span>, our roots
+                            Hambaricho Coffee, our roots
                             lie deep in the birthplace of coffee. For generations, Ethiopian
                             farmers have handpicked beans under the shade of indigenous trees,
                             and we are proud to carry that heritage forward.
@@ -87,7 +87,7 @@ const page = () => {
                 {/* Our Promise */}
                 <section className="w-full">
                     <div className='max-w-lg mx-auto'>
-                        <h3 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary dark:text-white text-center mb-2">
+                        <h3 className="font-[SuisseIntl-Bold] text-4xl md:text-5xl text-greenSecondary dark:text-white text-center mb-2">
                             OUR PROMISE
                             <div className="h-[1.5px] bg-greenSecondary w-[70%] mx-auto mb-4"></div>
                         </h3>
@@ -127,7 +127,7 @@ const page = () => {
                                     {item.number}
                                 </span>
                                 <div>
-                                    <h4 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary dark:text-white">
+                                    <h4 className="font-[SuisseIntl-Bold] text-3xl md:text-5xl text-greenSecondary dark:text-white">
                                         {item.title}
                                         <div className="h-[1.5px] bg-greenSecondary w-11/12 mb-4"></div>
                                     </h4>
@@ -140,7 +140,7 @@ const page = () => {
                 </section>
             </div>
             <div className='md:h-[100dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-greenSecondary py-12'>
-                <p className='text-white font-[PPEditorialNew-Italic] max-w-5xl text-5xl md:text-8xl text-center mx-auto'>
+                <p className='text-white font-[PPEditorialNew-Italic] max-w-5xl text-4xl px-2 md:text-8xl text-center mx-auto'>
                     &quot; We don&lsquo;t just sell coffee. We share a piece of our soul, history, and our home with the world &quot;
                 </p>
                 <div className='space-y-2 flex flex-col items-center text-white'>

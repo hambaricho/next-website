@@ -22,8 +22,8 @@ export default function ExportHero() {
                 <p className="text-base md:text-lg font-[SuisseIntl-Light] text-white/90 mb-4 mt-4">
                     We bridge the distance with seamless global logistics. Our expert team manages the entire export process from meticulous documentation to bespoke packaging, ensuring your coffee arrives with its quality and story intact.
                 </p>
-                <Button text="Place Your Order" className="px-6 py-3 bg-secondary border border-white text-white font-[SuisseIntl-Regular]" />
-            </div>
+                <Button text="Order Now" className=" bg-secondary border border-white" />
+            </div>  
 
             {/* Bottom zigzag border */}
             <div className="hidden lg:flex absolute -bottom-8 md:-bottom-16 -z-0 left-0 w-full translate-y-1 rotate-180">

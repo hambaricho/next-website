@@ -61,15 +61,15 @@ const steps = [
 const page = () => {
 
     return (
-        <main className="min-h-screen bg-gray-100 pt-14 md:pt-28 pb-10">
+        <main className="min-h-screen bg-white dark:bg-secondary pt-14 md:pt-28 pb-10">
             <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-16 py-12">
                 <header className="text-center mb-16">
-                    <p className="font-[PPEditorialNew-Italic] text-lg text-greenSecondary">
+                    <p className="font-[PPEditorialNew-Italic] text-lg text-greenSecondary dark:text-white">
                         From Bean to Bag
                     </p>
-                    <AnimatedHeader as='h1' text='A Journey of' className='font-[SuisseIntl-Bold] text-5xl md:text-8xl text-greenSecondary' />
-                    <AnimatedHeader as='h1' text='Unwavering Quality' className='font-[SuisseIntl-Bold] text-5xl md:text-8xl text-greenSecondary' />
-                    <p className="mt-4 text-greenSecondary font-[SuisseIntl-Light] md:text-lg max-w-2xl mx-auto">
+                    <AnimatedHeader as='h1' text='A Journey of' className='font-[SuisseIntl-Bold] text-4xl md:text-8xl text-greenSecondary dark:text-white' />
+                    <AnimatedHeader as='h1' text='Unwavering Quality' className='font-[SuisseIntl-Bold] text-4xl md:text-8xl text-greenSecondary dark:text-white' />
+                    <p className="mt-4 text-greenSecondary dark:text-white font-[SuisseIntl-Light] md:text-lg max-w-2xl mx-auto">
                         Every coffee bean has a story. Ours is one of meticulous care, expert
                         craftsmanship, and a commitment to excellence at every single stage.
                     </p>
@@ -85,9 +85,9 @@ const page = () => {
                                     <span className="font-[PPEditorialNew-Italic] text-5xl text-greenSecondary/50">
                                         {s.num}
                                     </span>
-                                    <AnimatedHeader as='h2' text={s.title} className='font-[SuisseIntl-Bold] text-3xl text-greenSecondary' />
+                                    <AnimatedHeader as='h2' text={s.title} className='font-[SuisseIntl-Bold] text-2xl md:text-3xl text-greenSecondary dark:text-white' />
                                 </div>
-                                <p className="text-greenSecondary font-[SuisseIntl-Light]">{s.text}</p>
+                                <p className="text-greenSecondary dark:text-white font-[SuisseIntl-Light]">{s.text}</p>
                             </div>
                             <div className="relative w-full h-52 md:h-56 lg:h-64">
                                 <Image
@@ -174,7 +174,7 @@ const page = () => {
                 </div>
             </section>
 
-            <div className='md:h-[100dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-gray-100 py-12'>
+            <div className='md:h-[100dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-white dark:bg-secondary py-12'>
                 <p className='text-greenSecondary font-[SuisseIntl-Bold] max-w-4xl text-5xl md:text-8xl text-center mx-auto'>
                     Export with Confidence
                 </p>
