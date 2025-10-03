@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/context/ThemeContext";
 import NavBar from "@/components/layout/NavBar";
 import Contact from "@/components/section/Contact";
+import Preloader from "@/components/ui/Preloader";
 import SmoothScrolling from "@/utils/SmoothScrolling";
 import { Providers } from "@/utils/Transition";
 import { Analytics } from "@vercel/analytics/next";
@@ -68,6 +69,7 @@ export default function RootLayout({
       >
         <Providers>
           <ThemeProvider>
+            <Preloader />
             <SmoothScrolling>
               <NavBar />
               {children}
