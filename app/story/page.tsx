@@ -44,11 +44,11 @@ export const metadata: Metadata = {
 
 const page = () => {
     return (
-        <main className="w-full min-h-screen bg-gray-100">
+        <main className="w-full min-h-screen bg-gray-100 dark:bg-secondary pt-14 md:pt-28">
             <div className="flex flex-col items-center px-4 py-12 md:px-8 lg:px-16 max-w-7xl mx-auto">
 
                 <section className="text-center mb-16">
-                    <AnimatedHeader as='h1' text='THE LAND OF' className='font-[SuisseIntl-Bold] text-6xl md:text-8xl text-greenSecondary' />
+                    <AnimatedHeader as='h1' text='THE LAND OF' className='font-[SuisseIntl-Bold] text-6xl md:text-8xl text-greenSecondary dark:text-white' />
                     <AnimatedHeader as='h1' text='COFFEE' className='font-[PPEditorialNew-Italic] text-6xl md:text-8xl text-greenSecondary' />
                 </section>
 
@@ -63,18 +63,18 @@ const page = () => {
                         />
                     </div>
                     <div>
-                        <h3 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary mb-2">
+                        <h3 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary dark:text-white mb-2">
                             OUR STORY
                         </h3>
                         <div className="h-[1.5px] bg-greenSecondary w-full mb-4"></div>
-                        <p className="text-greenSecondary font-[SuisseIntl-Light] leading-relaxed">
+                        <p className="text-greenSecondary dark:text-white font-[SuisseIntl-Light] leading-relaxed">
                             Coffee is not just a crop in Ethiopia, it is a way of life. At{" "}
                             <span className="font-semibold">HambariCho Coffee</span>, our roots
                             lie deep in the birthplace of coffee. For generations, Ethiopian
                             farmers have handpicked beans under the shade of indigenous trees,
                             and we are proud to carry that heritage forward.
                         </p>
-                        <p className="text-greenSecondary font-[SuisseIntl-Light] leading-relaxed mt-4">
+                        <p className="text-greenSecondary dark:text-white font-[SuisseIntl-Light] leading-relaxed mt-4">
                             Our role is simple but meaningful: to connect these farming
                             communities with the world’s roasters and distributors. By focusing
                             solely on green coffee exports, we ensure that every bag we deliver
@@ -87,11 +87,11 @@ const page = () => {
                 {/* Our Promise */}
                 <section className="w-full">
                     <div className='max-w-lg mx-auto'>
-                        <h3 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary text-center mb-2">
+                        <h3 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary dark:text-white text-center mb-2">
                             OUR PROMISE
                             <div className="h-[1.5px] bg-greenSecondary w-[70%] mx-auto mb-4"></div>
                         </h3>
-                        <p className="text-center text-greenSecondary tracking-widest font-[SuisseIntl-Light] mb-12">
+                        <p className="text-center text-greenSecondary dark:text-white tracking-widest font-[SuisseIntl-Light] mb-12">
                             Trust, Consistency, and a partnership rooted in authenticity.
                         </p>
                     </div>
@@ -121,17 +121,17 @@ const page = () => {
                         ].map((item) => (
                             <div
                                 key={item.number}
-                                className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                                className="flex flex-col md:flex-row md:items-end gap-4 md:gap-8"
                             >
                                 <span className="font-[PPEditorialNew-Italic] text-greenSecondary/50 text-6xl text-coffeeGreen shrink-0">
                                     {item.number}
                                 </span>
                                 <div>
-                                    <h4 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary mb-1">
+                                    <h4 className="font-[SuisseIntl-Bold] text-5xl text-greenSecondary dark:text-white">
                                         {item.title}
                                         <div className="h-[1.5px] bg-greenSecondary w-11/12 mb-4"></div>
                                     </h4>
-                                    <p className="text-greenSecondary font-[SuisseIntl-Light]">{item.text}</p>
+                                    <p className="text-greenSecondary dark:text-white font-[SuisseIntl-Light]">{item.text}</p>
                                 </div>
                             </div>
                         ))}
@@ -139,13 +139,17 @@ const page = () => {
                     </div>
                 </section>
             </div>
-            <div className='md:h-[70vh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-greenSecondary py-12'>
+            <div className='md:h-[100dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-greenSecondary py-12'>
                 <p className='text-white font-[PPEditorialNew-Italic] max-w-5xl text-5xl md:text-8xl text-center mx-auto'>
                     &quot; We don&lsquo;t just sell coffee. We share a piece of our soul, history, and our home with the world &quot;
                 </p>
+                <div className='space-y-2 flex flex-col items-center text-white'>
+                    <span className='text-lg font-[PPEditorialNew-Italic]'>Name</span>
+                    <span className='text-lg font-[SuisseIntl-Bold]'>Founder of Hambaricho Coffee</span>
+                </div>
             </div>
 
-            <div className='md:h-[70dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-gray-100 py-12'>
+            <div className='md:h-[70dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-gray-100 dark:bg-secondary py-12'>
                 <p className='text-greenSecondary font-[SuisseIntl-Bold] max-w-4xl text-5xl md:text-8xl text-center mx-auto'>
                     Ready to Partner with Purpose?
                 </p>

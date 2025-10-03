@@ -155,7 +155,7 @@ export default function CatalogClient() {
         <div className="min-h-screen bg-greenSecondary dark:bg-secondary pt-28 pb-10 px-4">
             <div className="text-center mb-2">
                 <p className="text-sm uppercase tracking-wider text-white/80 mb-2">Hambaricho Coffee</p>
-                <h1 className="text-5xl md:text-7xl font-[SuisseIntl-Bold] text-white uppercase mb-4">
+                <h1 className="text-5xl md:text-7xl font-[SuisseIntl-Bold] text-white dark:text-primary-dark uppercase mb-4">
                     {activeCoffee.name}
                 </h1>
                 <p className="text-white/90 max-w-2xl mx-auto font-[SuisseIntl-Light]">

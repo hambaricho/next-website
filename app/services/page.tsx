@@ -36,40 +36,40 @@ const steps = [
         num: "01",
         title: "Sustainable Sourcing",
         text: "Ethically produced with traceable origins from trusted Ethiopian farmers.",
-        img: "/images/gallery.jpg",
+        img: "/images/service/s3.jpeg",
     },
     {
         num: "02",
         title: "Raw Bean Selection",
         text: "Choose from a wide range of specialty and commercial coffees, matched to your quality and profile needs.",
-        img: "/images/gallery.jpg",
+        img: "/images/service/s4.jpeg",
     },
     {
         num: "03",
         title: "Import & Logistics Support",
         text: "Guidance with documentation, shipping, and international trade compliance to ensure smooth delivery.",
-        img: "/images/gallery.jpg",
+        img: "/images/service/s5.jpeg",
     },
     {
         num: "04",
         title: "Customizable Export Options",
         text: "From small specialty shipments to full container loads, tailored to your business requirements.",
-        img: "/images/gallery.jpg",
+        img: "/images/service/s6.jpeg",
     },
 ];
 
 const page = () => {
 
     return (
-        <main className="min-h-screen bg-gray-100 pt-28 pb-10">
+        <main className="min-h-screen bg-gray-100 pt-14 md:pt-28 pb-10">
             <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-16 py-12">
                 <header className="text-center mb-16">
                     <p className="font-[PPEditorialNew-Italic] text-lg text-greenSecondary">
                         From Bean to Bag
                     </p>
-                    <AnimatedHeader as='h1' text='A Journey of' className='font-[SuisseIntl-Bold] text-6xl md:text-8xl text-greenSecondary' />
-                    <AnimatedHeader as='h1' text='Unwavering Quality' className='font-[SuisseIntl-Bold] text-6xl md:text-8xl text-greenSecondary' />
-                    <p className="mt-4 text-greenSecondary font-[SuisseIntl-Light] text-lg max-w-2xl mx-auto">
+                    <AnimatedHeader as='h1' text='A Journey of' className='font-[SuisseIntl-Bold] text-5xl md:text-8xl text-greenSecondary' />
+                    <AnimatedHeader as='h1' text='Unwavering Quality' className='font-[SuisseIntl-Bold] text-5xl md:text-8xl text-greenSecondary' />
+                    <p className="mt-4 text-greenSecondary font-[SuisseIntl-Light] md:text-lg max-w-2xl mx-auto">
                         Every coffee bean has a story. Ours is one of meticulous care, expert
                         craftsmanship, and a commitment to excellence at every single stage.
                     </p>
@@ -102,12 +102,20 @@ const page = () => {
                 </section>
             </div>
 
-            <section className="bg-greenSecondary text-white py-16 px-4 md:py-16 ">
-                <div className="max-w-6xl mx-auto text-center mb-12">
-                    <AnimatedHeader as='h2' text='Packaging &' className='font-[SuisseIntl-Bold] text-6xl md:text-8xl text-white' />
-                    <AnimatedHeader as='h2' text='Specifications' className='font-[SuisseIntl-Bold] text-6xl md:text-8xl text-white' />
+            <section className="bg-greenSecondary min-h-screen text-white py-16 px-4 md:py-16 relative">
 
-                    <p className="max-w-2xl mx-auto text-white text-lg font-[SuisseIntl-Light]">
+                <Image
+                    src="/images/organic.webp"
+                    alt="Organic Coffee Badge hambaricho"
+                    width={120}
+                    height={120}
+                    className="object-cover absolute -top-10 left-1/2 -translate-x-1/2 w-24 md:w-28"
+                />
+                <div className="max-w-6xl mx-auto text-center mb-12">
+                    <AnimatedHeader as='h2' text='Packaging &' className='font-[SuisseIntl-Bold] text-5xl md:text-8xl text-white' />
+                    <AnimatedHeader as='h2' text='Specifications' className='font-[SuisseIntl-Bold] text-5xl md:text-8xl text-white' />
+
+                    <p className="max-w-2xl mx-auto text-white md:text-lg font-[SuisseIntl-Light]">
                         Your coffee deserves the best protection from farm to shipment.
                         Hambaricho Coffee ensures international-standard packaging and
                         handling.
@@ -166,7 +174,7 @@ const page = () => {
                 </div>
             </section>
 
-            <div className='md:h-[70dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-gray-100 py-12'>
+            <div className='md:h-[100dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-gray-100 py-12'>
                 <p className='text-greenSecondary font-[SuisseIntl-Bold] max-w-4xl text-5xl md:text-8xl text-center mx-auto'>
                     Export with Confidence
                 </p>
