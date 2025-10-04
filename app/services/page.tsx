@@ -19,15 +19,24 @@ export const metadata: Metadata = {
         title: "From Bean to Bag | A Journey of Unwavering Quality",
         description:
             "Sustainable sourcing and export of premium Ethiopian coffee with complete traceability and expert logistics.",
-        url: "https://yourdomain.com/journey",
+        url: "https://hambarichocoffee.com/services",
+        siteName: "Hambaricho Coffee",
         images: [
             {
-                url: "/images/og-journey.jpg",
+                url: "https://hambarichocoffee.com/images/og.png",
                 width: 1200,
                 height: 630,
                 alt: "Coffee beans journey from Ethiopia",
             },
         ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        site: "@HambarichoCoffee",
+        title: "From Bean to Bag | A Journey of Unwavering Quality",
+        description:
+            "Sustainable sourcing and export of premium Ethiopian coffee with complete traceability.",
+        images: ["https://hambarichocoffee.com/images/og.png"],
     },
 };
 

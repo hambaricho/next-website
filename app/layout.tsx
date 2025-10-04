@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Hambaricho Coffee",
     images: [
       {
-        url: "https://hambarichocoffee.com/og-default.jpg",
+        url: "https://hambarichocoffee.com/images/og.png",
         width: 1200,
         height: 630,
         alt: "Hambaricho Coffee",
@@ -45,6 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@HambarichoCoffee",
+    images: ["https://hambarichocoffee.com/images/og.png"],
   },
   icons: {
     icon: "/favicon.ico",

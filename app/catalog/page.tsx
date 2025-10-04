@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         siteName: "Hambaricho Coffee",
         images: [
             {
-                url: "https://hambarichocoffee.com/og-catalog.jpg",
+                url: "https://hambarichocoffee.com/images/og.png",
                 width: 1200,
                 height: 630,
                 alt: "Hambaricho Coffee - Ethiopian Green Coffee Catalog",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         title: "Ethiopian Coffee Catalog | Premium Green Beans",
         description:
             "Browse Yirgacheffe, Sidamo, Guji, Harar & more Ethiopian coffees with detailed profiles and export specs.",
-        images: ["https://hambarichocoffee.com/og-catalog.jpg"],
+        images: ["https://hambarichocoffee.com/images/og.png"],
     },
 };
 

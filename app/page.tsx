@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Hambaricho Coffee",
     images: [
       {
-        url: "https://hambarichocoffee.com/og-image.jpg", // Replace with your actual OG image path
+        url: "https://hambarichocoffee.com/images/og.png",
         width: 1200,
         height: 630,
         alt: "Hambaricho Coffee - Ethiopian Green Coffee Exporter",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Premium Ethiopian Green Coffee Exporter | Hambaricho Coffee",
     description:
       "Fresh, traceable Ethiopian green coffee beans exported worldwide.",
-    images: ["https://hambarichocoffee.com/og-image.jpg"],
+    images: ["https://hambarichocoffee.com/images/og.png"],
   },
   icons: {
     icon: "/favicon.ico",
