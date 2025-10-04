@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-2 bg-gray-200 z-50 absolute top-4 left-1/2 -translate-x-1/2 shadow-lg">
+      <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-1 bg-gray-200 z-50 absolute top-4 left-1/2 -translate-x-1/2 shadow-md">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/images/footerLogo.svg" alt="Logo" width={40} height={40} />
         </Link>

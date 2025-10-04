@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
 const page = () => {
     return (
-        <main className="w-full min-h-screen bg-gray-100 dark:bg-secondary pt-14 md:pt-28">
+        <main className="w-full min-h-screen bg-gray-100 dark:bg-secondary transition-colors duration-300 pt-14 md:pt-28">
             <div className="flex flex-col items-center px-4 py-12 md:px-8 lg:px-16 max-w-7xl mx-auto">
 
                 <section className="text-center mb-16">

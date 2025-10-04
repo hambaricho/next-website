@@ -8,6 +8,7 @@ import { useRef } from "react"
 import { AnimatedHeader } from "../ui/AnimatedHeader"
 import Button from "../ui/Button"
 import SVGLine from "../ui/SVGLine"
+import Clouds from "../ui/cloud"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -99,9 +100,9 @@ const Landing = () => {
 
 
     return (
-        <div ref={containerRef} className="min-h-[90dvh] md:min-h-[160dvh] relative z-10 flex flex-col items-center bg-gray-100 dark:bg-primary-dark
-         pt-24 md:pt-40 overflow-hidden">
-            <div ref={textRef} className="text-center z-20 relative flex flex-col items-center">
+        <div ref={containerRef} className="min-h-[90dvh] md:min-h-[170dvh] relative z-10 flex flex-col items-center bg-gray-100 dark:bg-primary-dark
+         pt-24 md:pt-44 overflow-hidden transition-colors duration-300">
+            <div ref={textRef} className="text-center mt-8 z-20 relative flex flex-col items-center">
                 {/* Screen reader only versions */}
                 <h1 className="sr-only">
                     From Ethiopia&lsquo;s highlands to your roastery
@@ -119,7 +120,7 @@ const Landing = () => {
                 <AnimatedHeader as="h1"
                     className="text-4xl md:text-6xl text-center max-w-8xl px-4 uppercase text-secondary dark:text-gray-100 font-[SuisseIntl-Bold] mb-1"
                     text="highlands to your roastery" />
-                <p className="md:text-2xl text-center max-w-sm md:max-w-4xl px-4 text-gray-700 dark:text-gray-300 font-[SuisseIntl-Light] mb-4">
+                <p className="md:text-xl text-center max-w-sm md:max-w-3xl px-4 text-gray-700 dark:text-gray-300 font-[SuisseIntl-Light] mb-4">
                     Hambaricho Coffee exports premium Ethiopian green beans directly
                     from trusted producers, rooted in heritage, delivered with reliability.
                 </p>
@@ -173,6 +174,7 @@ const Landing = () => {
                 className="w-screen absolute bottom-6 md:-bottom-30"
             />
             <SVGLine />
+            <Clouds />
             <Image
                 ref={bg1Ref}
                 src="/images/bg1.svg"
@@ -180,7 +182,7 @@ const Landing = () => {
                 width={800}
                 height={400}
                 priority
-                className="w-screen absolute z-20 object-cover bottom-0 md:-bottom-50"
+                className="w-screen absolute z-20 object-cover bottom-0 md:-bottom-52"
             />
         </div>
     )
