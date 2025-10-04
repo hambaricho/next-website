@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative">
-      <SVGLine />
+      {/* <SVGLine /> */}
       <div className="relative bg-secondary overflow-x-hidden">
         <Landing />
         <Marquee className="flex lg:hidden -mt-8 mb-10 relative z-30" />
@@ -67,6 +67,6 @@ export default function Home() {
       <Images />
       <Service />
       <ExportHero />
-    </div>
+    </div>  
   );
 }

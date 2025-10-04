@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/context/ThemeContext";
+import { CursorProvider } from "@/components/context/CursorContext";
 import NavBar from "@/components/layout/NavBar";
 import Contact from "@/components/section/Contact";
 import Preloader from "@/components/ui/Preloader";
@@ -70,13 +71,15 @@ export default function RootLayout({
       >
         <Providers>
           <ThemeProvider>
-            <Preloader />
-            <SmoothScrolling>
-              <NavBar />
-              {children}
-              <Contact />
-            </SmoothScrolling>
-            <Analytics />
+            <CursorProvider>
+              <Preloader />
+              <SmoothScrolling>
+                <NavBar />
+                {children}
+                <Contact />
+              </SmoothScrolling>
+              <Analytics />
+            </CursorProvider>
           </ThemeProvider>
         </Providers>
       </body>

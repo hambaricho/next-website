@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AnimatedHeader } from '@/components/ui/AnimatedHeader';
 import Button from '@/components/ui/Button';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: "The Land of Coffee | Hambaricho Coffee Ethiopia",
@@ -153,7 +154,9 @@ const page = () => {
                 <p className='text-greenSecondary font-[SuisseIntl-Bold] max-w-4xl text-5xl md:text-8xl text-center mx-auto'>
                     Ready to Partner with Purpose?
                 </p>
-                <Button text='Contact Us' className='bg-greenSecondary text-white mx-auto' />
+                <Link href="#contact">
+                    <Button text='Contact Us' className='bg-greenSecondary text-white mx-auto' />
+                </Link>
             </div>
         </main>
 

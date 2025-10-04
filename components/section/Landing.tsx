@@ -10,6 +10,7 @@ import Button from "../ui/Button"
 import SVGLine from "../ui/SVGLine"
 import Clouds from "../ui/cloud"
 import Marquee from "../ui/Marquee"
+import { Link } from "next-transition-router"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -125,7 +126,9 @@ const Landing = () => {
                     Hambaricho Coffee exports premium Ethiopian green beans directly
                     from trusted producers, rooted in heritage, delivered with reliability.
                 </p>
-                <Button text="ABOUT US" className="bg-primary landing-button origin-top" />
+                <Link href="/story">
+                    <Button text="ABOUT US" className="bg-primary landing-button origin-top" />
+                </Link>
             </div>
 
             <Image
@@ -174,9 +177,7 @@ const Landing = () => {
                 priority
                 className="w-screen absolute bottom-6 md:-bottom-30"
             />
-            <SVGLine />
-
-            <Clouds />
+            {/* <SVGLine /> */}
 
             <Image
                 ref={bg1Ref}

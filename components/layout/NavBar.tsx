@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useTheme } from "@/components/context/ThemeContext"
 import Audio from "../ui/Audio"
+import CursorSelector from "../ui/CursorSelector"
 import { Moon, Sun } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
@@ -42,6 +43,7 @@ const NavBar = () => {
         {/* Right: Emoji buttons, theme switcher, hamburger */}
         <div className="flex items-center gap-2">
           <Audio />
+          <CursorSelector />
           {/* Theme switcher */}
           <button
             onClick={toggleTheme}

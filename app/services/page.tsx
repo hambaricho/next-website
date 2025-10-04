@@ -3,6 +3,7 @@ import React from 'react'
 import type { Metadata } from "next";
 import { AnimatedHeader } from '@/components/ui/AnimatedHeader';
 import Button from '@/components/ui/Button';
+import Link from 'next/link';
 
 
 export const metadata: Metadata = {
@@ -187,7 +188,9 @@ const page = () => {
                 <p className='text-greenSecondary font-[SuisseIntl-Bold] max-w-4xl text-5xl md:text-8xl text-center mx-auto'>
                     Export with Confidence
                 </p>
-                <Button text='Contact Us' className='bg-greenSecondary text-white mx-auto' />
+                <Link href="#contact">
+                    <Button text='Contact Us' className='bg-greenSecondary text-white mx-auto' />
+                </Link>
             </div>
         </main>
     )
