@@ -9,6 +9,7 @@ import { AnimatedHeader } from "../ui/AnimatedHeader"
 import Button from "../ui/Button"
 import SVGLine from "../ui/SVGLine"
 import Clouds from "../ui/cloud"
+import Marquee from "../ui/Marquee"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -100,8 +101,8 @@ const Landing = () => {
 
 
     return (
-        <div ref={containerRef} className="min-h-[90dvh] md:min-h-[170dvh] relative z-10 flex flex-col items-center bg-gray-100 dark:bg-primary-dark
-         pt-24 md:pt-44 overflow-hidden transition-colors duration-300">
+        <div ref={containerRef} className="min-h-[90dvh] md:min-h-[170dvh] relative z-10 flex flex-col transition-colors duration-300 items-center bg-gray-100 dark:bg-primary-dark
+         pt-24 md:pt-44 overflow-hidden">
             <div ref={textRef} className="text-center mt-8 z-20 relative flex flex-col items-center">
                 {/* Screen reader only versions */}
                 <h1 className="sr-only">
@@ -174,7 +175,9 @@ const Landing = () => {
                 className="w-screen absolute bottom-6 md:-bottom-30"
             />
             <SVGLine />
+
             <Clouds />
+
             <Image
                 ref={bg1Ref}
                 src="/images/bg1.svg"
@@ -184,6 +187,8 @@ const Landing = () => {
                 priority
                 className="w-screen absolute z-20 object-cover bottom-0 md:-bottom-52"
             />
+
+            <Marquee />
         </div>
     )
 }

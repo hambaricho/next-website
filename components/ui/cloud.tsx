@@ -150,14 +150,15 @@ function CloudShader() {
 
 export default function Clouds() {
     return (
-        <Canvas
-            gl={{ alpha: true }}
-            style={{ width: "100vw", height: "100vh", background: "transparent" }}
-            orthographic
-            camera={{ position: [0, 0, 1], zoom: 1 }}
-            className="z-50"
-        >
-            <CloudShader />
-        </Canvas>
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
+            <Canvas
+                gl={{ alpha: true }}
+                style={{ width: "100%", height: "100%", background: "transparent" }}
+                orthographic
+                camera={{ position: [0, 0, 1], zoom: 1 }}
+            >
+                <CloudShader />
+            </Canvas>
+        </div>
     )
 }
