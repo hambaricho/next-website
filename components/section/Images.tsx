@@ -6,7 +6,7 @@ import { AnimatedHeader } from '../ui/AnimatedHeader'
 const Images = () => {
 
     return (
-        <div className='detailSection flex flex-col items-center bg-secondary justify-center gap-4 md:gap-16 lg:py-8'>
+        <div className='detailSection flex flex-col items-center bg-secondary justify-center gap-4 md:gap-16 lg:py-12'>
             <AnimatedHeader as="h1"
                 className="text-4xl md:text-6xl text-left w-3/4 uppercase text-white relative z-30 font-[SuisseIntl-Bold]"
                 text="Gallery/Blog" />

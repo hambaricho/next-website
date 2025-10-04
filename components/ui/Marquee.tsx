@@ -1,3 +1,4 @@
+"use client"
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -6,7 +7,7 @@ function MarqueeItem({ images, from, to }: {
     from: number | string, to: number | string
 }) {
     return (
-        <div className="flex my-24">
+        <div className="flex">
             <motion.div
                 initial={{ x: `${from}` }}
                 animate={{ x: `${to}` }}
@@ -46,7 +47,7 @@ function MarqueeItem({ images, from, to }: {
     );
 };
 
-export default function Marquee() {
+export default function Marquee({ className }: { className: string }) {
 
     const images = [
         "/images/logoWithText.webp",
@@ -59,7 +60,7 @@ export default function Marquee() {
     ];
 
     return (
-        <div className="container mx-auto overflow-hidden select-none absolute -bottom-16 md:bottom-0 left-0 z-30">
+        <div className={`container mx-auto overflow-hidden select-none ${className}`}>
             <MarqueeItem images={images} from={0} to={"-100%"} />
         </div>
     );

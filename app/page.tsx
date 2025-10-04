@@ -3,6 +3,7 @@ import ExportHero from "@/components/section/ExportHero";
 import Images from "@/components/section/Images";
 import Landing from "@/components/section/Landing";
 import Service from "@/components/section/Service";
+import Marquee from "@/components/ui/Marquee";
 import SVGLine from "@/components/ui/SVGLine";
 import type { Metadata } from "next";
 
@@ -58,8 +59,9 @@ export default function Home() {
   return (
     <div className="relative">
       <SVGLine />
-      <div className="relative bg-secondary">
+      <div className="relative bg-secondary overflow-x-hidden">
         <Landing />
+        <Marquee className="flex lg:hidden -mt-8 mb-10 relative z-30" />
         <Cards />
       </div>
       <Images />
