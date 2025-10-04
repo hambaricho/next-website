@@ -144,9 +144,9 @@ const page = () => {
                     &quot; We don&lsquo;t just sell coffee. We share a piece of our soul, history, and our home with the world &quot;
                 </p>
                 <div className='space-y-2 flex flex-col items-center text-white'>
-                    <span className='text-lg font-[PPEditorialNew-Italic]'>Name</span>
+                    <span className='text-lg font-[PPEditorialNew-Italic]'>Muhammed ERGÜVENOĞLU</span>
                     <span className='text-lg font-[SuisseIntl-Bold]'>Founder of Hambaricho Coffee</span>
-                </div>
+                </div>  
             </div>
 
             <div className='md:h-[70dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-gray-100 dark:bg-secondary py-12'>

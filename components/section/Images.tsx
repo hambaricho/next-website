@@ -8,7 +8,7 @@ const Images = () => {
     return (
         <div className='detailSection flex flex-col items-center bg-secondary justify-center gap-4 md:gap-16 lg:py-8'>
             <AnimatedHeader as="h1"
-                className="text-4xl md:text-6xl text-left max-w-[870px] px-4 uppercase text-gray-100 relative z-30 font-[SuisseIntl-Bold] mb-1"
+                className="text-4xl md:text-6xl text-left w-3/4 uppercase text-white relative z-30 font-[SuisseIntl-Bold]"
                 text="Gallery/Blog" />
 
             <div className='w-full lg:w-4/5 h-[500px] relative'>

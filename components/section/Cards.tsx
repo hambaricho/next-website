@@ -4,143 +4,59 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AnimatedHeader } from "../ui/AnimatedHeader";
 import Card from "../ui/Card";
-import { MaskText } from "../ui/MaskTextAnimation";
 import CardsMobile from "./CardsMobile";
 
 
 const coffeeData = [
     {
         img: "/images/coffee/1.jpg",
-        name: "Yirgacheffe",
-        origin: "Southern Ethiopia, high-altitude plantations (4,900–7,225 ft)",
-        grade1: "Washed: Sidamo Grade 1 & 2",
-        grade2: "Natural: Sidamo Grade 2, 3, 4, UG",
-        flavor: "Delicate & Elegant – tea-like body with floral aromas. Washed Process – enhances clarity and brightness. World-Renowned – one of Ethiopia’s most celebrated coffees.",
-        altitude: "1,800–2,200 m",
-        processing: "Washed & Natural",
-        body: "Light to medium, tea-like",
-        acidity: "9/10 (floral, lemony, very lively)",
-        weight: "Light",
-        available: "Washed: Sidamo Grade 1 & 2 | Natural: Sidamo Grade 2, 3, 4, UG",
-        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
-        garbling: "Clean",
-        shelfLife: "6–9 months",
-        description: "Celebrated worldwide, Yirgacheffe coffee comes from Ethiopia’s lush mountains and is carefully washed for clarity. Expect delicate floral notes, bright citrus flavors, and a tea-like body — a refined and elegant brew for true coffee enthusiasts.",
-        loadability: "20ft container: 320 bags / 19,200 kg"
+        name: "Sidamo",
+        cardInfo1: "Bright & Floral",
+        cardInfo2: "High-Altitude Growth",
+        cardInfo3: "Balanced Cup",
     },
     {
         img: "/images/coffee/2.jpg",
-        name: "Sidamo",
-        origin: "Yirgacheffe, Southern Ethiopia (high-altitude 5,900–7,200 ft)",
-        grade1: "Washed: Yirgacheffe Grade 1 & 2",
-        grade2: "Natural: Yirgacheffe Grade 3, 4, UG",
-        flavor: "Bright & Floral – citrus and jasmine notes. High-Altitude Growth – slow-grown for rich flavor. Balanced Cup – smooth body with elegant acidity.",
-        altitude: "1,500–2,200 m",
-        processing: "Washed & Natural",
-        body: "Medium, smooth",
-        acidity: "7/10 (bright, citrusy)",
-        weight: "Medium",
-        available: "Washed: Yirgacheffe Grade 1 & 2 | Natural: Yirgacheffe Grade 3, 4, UG",
-        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
-        garbling: "Clean",
-        shelfLife: "6–9 months",
-        description: "Grown in the highlands of southern Ethiopia, Sidamo coffee is handpicked for its exceptional quality. This coffee offers bright acidity, floral aromas, and hints of citrus and jasmine, delivering a smooth and balanced cup that represents Ethiopia’s rich coffee heritage.",
-        loadability: "20ft container: 320 bags / 19,200 kg"
+        name: "Yirgacheffe",
+        cardInfo1: "Delicate & Elegant",
+        cardInfo2: "Washed Process",
+        cardInfo3: "World Renowned",
     },
     {
         img: "/images/coffee/3.jpg",
         name: "Limu",
-        origin: "Western Ethiopia (1,300–1,900 m)",
-        grade1: "Washed: Limu Grade 2",
-        grade2: "Natural: Limu Grade 3, 4, UG",
-        flavor: "Chocolatey & Well-Rounded – lingering, satisfying finish. Subtle Fruit & Spice – vibrant yet refined flavor. Southwestern Highlands – high-altitude, wet-processed quality.",
-        altitude: "1,500–2,000 m",
-        processing: "Washed & Natural",
-        body: "Medium, balanced",
-        acidity: "6/10 (sweet, subtle spice)",
-        weight: "Medium",
-        available: "Washed: Limu Grade 2 | Natural: Limu Grade 3, 4, UG",
-        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
-        garbling: "Clean",
-        shelfLife: "6–9 months",
-        description: "Cultivated in the southwestern highlands, Limu coffee is known for its well-rounded body, chocolatey richness, subtle fruity and spice notes, and a lingering finish. A clean, vibrant cup that highlights Ethiopia’s premium coffee quality.",
-        loadability: "20ft container: 320 bags / 19,200 kg"
+        cardInfo1: "Mild & Aromatic",
+        cardInfo2: "Citrus & Floral Notes",
+        cardInfo3: "Southern Ethiopia Origin",
+
     },
     {
         img: "/images/coffee/4.jpg",
         name: "Guji",
-        origin: "Guji Zone, Southern Ethiopia (5,900–7,200 ft)",
-        grade1: "Washed: Guji Grade 1 & 2",
-        grade2: "Natural: Guji Grade 2, 3, 4, UG",
-        flavor: "Fruity & Complex – berry and tropical notes. Specialty Coffee Region – emerging hotspot for premium beans. Vibrant Character – lively and memorable cup.",
-        altitude: "1,600–2,200 m",
-        processing: "Washed & Natural",
-        body: "Medium, velvety",
-        acidity: "8/10 (fruity-sweet, complex)",
-        weight: "Medium",
-        available: "Washed: Guji Grade 1 & 2 | Natural: Guji Grade 2, 3, 4, UG",
-        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
-        garbling: "Clean",
-        shelfLife: "6–9 months",
-        description: "From the fertile Guji region, these beans are known for their vibrant, fruity sweetness and complex flavors, often featuring berry and tropical fruit notes. Guji coffee offers a lively, memorable cup with rich Ethiopian character.",
-        loadability: "20ft container: 320 bags / 19,200 kg"
+        cardInfo1: "Fruity & Complex",
+        cardInfo2: "Specialty Grade",
+        cardInfo3: "Vibrant Character",
     },
     {
         img: "/images/coffee/5.jpg",
         name: "Jimma",
-        origin: "Jimma Zone, Oromia Region (sun-dried, 1,400–2,000 m)",
-        grade1: "Natural: Jimma Grade 4, 5, UG",
-        grade2: "",
-        flavor: "Nutty & Chocolatey – smooth, approachable flavor. Rustic Profile – versatile for blends or single-origin. Western Highlands Origin – earthy Ethiopian character.",
-        altitude: "1,350–2,000 m",
-        processing: "Natural (Dry-Processed)",
-        body: "Medium, rustic",
-        acidity: "4/10 (nutty, smooth, low brightness)",
-        weight: "Medium-heavy",
-        available: "Natural: Jimma Grade 4, 5, UG",
-        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
-        garbling: "Clean",
-        shelfLife: "6–9 months",
-        description: "Jimma coffee comes from western Ethiopia and delivers a rustic, smooth cup with nutty and chocolatey flavors. Its well-rounded profile makes it versatile — perfect for blends or as a standalone brew.",
-        loadability: "20ft container: 320 bags / 19,200 kg"
+        cardInfo1: "Nutty & Chocolatey",
+        cardInfo2: "Rustic Profile",
+        cardInfo3: "Western Highlands Origin",
     },
     {
         img: "/images/coffee/6.jpg",
         name: "Nekemte",
-        origin: "Wollega (Nekemte) region, Western Ethiopia",
-        grade1: "Natural: Lekempti Grade 4, 5, UG",
-        grade2: "",
-        flavor: "Sweet & Fruity – subtle fruity tones with medium body. Balanced & Approachable – ideal for everyday enjoyment. Western Ethiopia Grown – premium highland coffee.",
-        altitude: "1,500–2,000 m",
-        processing: "Natural (Dry-Processed)",
-        body: "Medium, round",
-        acidity: "5/10 (mild fruitiness)",
-        weight: "Medium",
-        available: "Natural: Lekempti Grade 4, 5, UG",
-        packaging: "30 Kg, 60 Kg, 70 Kg Bulk Bags",
-        garbling: "Clean",
-        shelfLife: "6–9 months",
-        description: "Grown in Ethiopia’s western highlands, Nekemte coffee is sweet, medium-bodied, and lightly fruity, offering a balanced and approachable cup. Its smooth flavor makes it a satisfying choice for everyday enjoyment.",
-        loadability: "20ft container: 320 bags / 19,200 kg"
+        cardInfo1: "Sweet & Fruity",
+        cardInfo2: "Balanced & Approachable",
+        cardInfo3: "Western Ethiopia Grown",
     },
     {
         img: "/images/coffee/7.jpg",
         name: "Harrar",
-        origin: "Harari Region, Eastern Ethiopia (sun-dried at 4,900–6,200 ft)",
-        grade1: "Natural: Harrar Grade 2, 3, 4, 5, UG",
-        grade2: "",
-        flavor: "Bold & Full-Bodied – strong, earthy flavor. Wild Berry & Chocolate Notes – unique wine-like profile. Traditional Dry-Processed – classic Ethiopian heritage.",
-        altitude: "1,400–1,900 m",
-        processing: "Natural (Dry-Processed)",
-        body: "Full, heavy",
-        acidity: "5/10 (wine-like, mild)",
-        weight: "Heavy",
-        available: "Natural: Harrar Grade 2, 3, 4, 5, UG",
-        packaging: "30 Kg, 50 Kg, 60 Kg Bulk Bags (Jute or Polypropylene)",
-        garbling: "Clean",
-        shelfLife: "6–9 months",
-        description: "One of Ethiopia’s oldest coffee regions, Harrar produces bold, full-bodied beans with wild berry, chocolate, and wine-like notes. Naturally processed, it has a distinct earthy character and a powerful, traditional flavor.",
-        loadability: "20ft container: 320 bags / 19,200 kg"
+        cardInfo1: "Bold & Full-Bodied",
+        cardInfo2: "Wild Berry & Chocolate Notes",
+        cardInfo3: "Traditional Dry-Processed",
     },
 ];
 
@@ -151,7 +67,7 @@ const cardLayout = [
     { x: -450, y: 500, rotation: 2, z: 10 },
     { x: -170, y: 450, rotation: 20, z: 10 },
     { x: 120, y: 500, rotation: 10, z: 10 },
-    { x: 450, y: 500, rotation: -20, z: 1 }
+    { x: 450, y: 500, rotation: -20, z: 40 }
 ];
 
 export default function Page() {
@@ -295,25 +211,48 @@ export default function Page() {
     return (
         <>
             <div className="flex flex-col items-center relative z-30">
-                <p className="text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white">
+                <p className="md:text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white">
                     Our Coffee
                 </p>
                 <AnimatedHeader as="h2"
-                    className="text-[1.6rem] md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold] mb-1"
+                    className="text-3xl md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold]"
                     text="From Ethiopia&lsquo;s lands" />
                 <AnimatedHeader as="h2"
-                    className="text-[1.6rem] md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold] mb-1"
+                    className="text-3xl md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold]"
                     text="to every horizon" />
 
-                <MaskText className="md:text-2xl text-center relative z-10 md:max-w-4xl text-gray-200 font-[SuisseIntl-Light] mb-4"
-                    text='Hambaricho Coffee exports premium Ethiopian green beans directly
-                    from trusted producers, rooted in heritage, delivered with reliability.'
-                />
+                <p className="text-sm md:text-2xl text-center relative z-10 px-4 lg:px-2 md:max-w-4xl text-gray-200 font-[SuisseIntl-Light] lg:mb-4">
+                    Hambaricho Coffee exports premium Ethiopian green beans directly
+                    from trusted producers, rooted in heritage, delivered with reliability.
+                </p>
 
             </div>
 
-            <div ref={containerRef} className="relative w-full min-h-[140dvh] bg-secondary flex flex-col items-center justify-between pt-6 md:pt-1 pb-10 px-10">
+            <div ref={containerRef} className="relative w-full min-h-[140dvh] bg-secondary flex flex-col items-center justify-between pb-10 px-10">
                 <CardsMobile />
+                
+                {/* Instruction prompt - only visible when no card is active */}
+                {activeIndex === null && (
+                    <div className="hidden lg:flex absolute top-1/3 right-8 flex-col items-center gap-2 pointer-events-none z-[100]">
+                        <p className="text-white text-xl font-[SuisseIntl-Light] text-center">
+                            Click on a card to explore
+                        </p>
+                        <svg 
+                            className="w-10 h-10 text-white" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth={2} 
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" 
+                            />
+                        </svg>
+                    </div>
+                )}
+                
                 <div
                     ref={overlayRef}
                     className="fixed inset-0 bg-black/30 transition-all"
@@ -327,11 +266,9 @@ export default function Page() {
                         image={coffee.img}
                         onClick={() => handleClick(i)}
                         title={coffee.name}
-                        origin={coffee.origin}
-                        grade1={coffee.grade1}
-                        grade2={coffee.grade2!}
-                        altitude={coffee.altitude}
-                        processing={coffee.processing}
+                        cardInfo1={coffee.cardInfo1}
+                        cardInfo2={coffee.cardInfo2}
+                        cardInfo3={coffee.cardInfo3}
                         className="card hidden lg:block absolute cursor-pointer" />
                 ))}
 
@@ -362,8 +299,6 @@ export default function Page() {
                         </button>
                     </>
                 )}
-
-                {/* <Button text="View Catalog" className="px-6 py-3 bg-primary border border-white text-white font-[SuisseIntl-Regular] absolute bottom-0" /> */}
             </div>
         </>
     );
