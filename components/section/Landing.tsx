@@ -7,10 +7,8 @@ import Image from "next/image"
 import { useRef } from "react"
 import { AnimatedHeader } from "../ui/AnimatedHeader"
 import Button from "../ui/Button"
-import SVGLine from "../ui/SVGLine"
-import Clouds from "../ui/cloud"
-import Marquee from "../ui/Marquee"
 import { Link } from "next-transition-router"
+import Marquee from "../ui/Marquee"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -177,8 +175,6 @@ const Landing = () => {
                 priority
                 className="w-screen absolute bottom-6 md:-bottom-30"
             />
-            {/* <SVGLine /> */}
-
             <Image
                 ref={bg1Ref}
                 src="/images/bg1.svg"

@@ -152,7 +152,7 @@ export default function CatalogClient() {
     const activeCoffee = coffeeData[activeIndex]
 
     return (
-        <div className="min-h-screen bg-greenSecondary dark:bg-secondary transition-colors duration-300 pt-28 pb-10 px-4">
+        <div className="min-h-screen bg-greenSecondary dark:bg-secondary transition-colors duration-300 pt-28 pb-10 lg:px-4">
             <div className="text-center mb-2">
                 <p className="text-sm uppercase tracking-wider text-white/80 mb-6">Hambaricho Coffee</p>
                 <h1 className="text-5xl md:text-7xl font-[SuisseIntl-Bold] text-white uppercase mb-4">
@@ -164,7 +164,7 @@ export default function CatalogClient() {
             </div>
 
             {/* Swiper Carousel */}
-            <div className="max-w-7xl mx-auto mb-2 relative">
+            <div className="w-full md:max-w-7xl mx-auto mb-2 relative">
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={false}
@@ -177,7 +177,7 @@ export default function CatalogClient() {
                         stretch: 15,    
                         depth: 100,
                         modifier: 2,
-                        slideShadows: true, 
+                        slideShadows: true,
                     }}
                     navigation={{
                         nextEl: '.swiper-button-next-custom',
@@ -209,12 +209,12 @@ export default function CatalogClient() {
                 </Swiper>
                 
                 {/* Custom Navigation Arrows */}
-                <button className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all group">
+                <button className="swiper-button-prev-custom hidden lg:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 items-center justify-center hover:bg-white/20 transition-all group">
                     <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
-                <button className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all group">
+                <button className="swiper-button-next-custom hidden lg:flex absolute right-4 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 items-center justify-center hover:bg-white/20 transition-all group">
                     <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>

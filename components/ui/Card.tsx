@@ -28,7 +28,7 @@ const Card = ({ image, title, cardInfo1, cardInfo2, cardInfo3, origin, flavor, a
                 height={480}
                 className='h-[350px] w-full rounded-t-xl rounded-b-3xl object-cover'
             />
-            <div className='flex-1 p-4 rounded-b-xl rounded-t-3xl  bg-white shadow-2xl shadow-secondary'>
+            <div className='flex-1 p-4 rounded-b-xl rounded-t-3xl  bg-white shadow-lg lg:shadow-2xl shadow-secondary'>
                 <p className='text-2xl text-center text-secondary uppercase font-[PPEditorialNew-Ultrabold]'>{title}</p>
                 <ul className='mt-4'>
                     {cardInfo1 &&

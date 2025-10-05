@@ -43,7 +43,7 @@ const NavBar = () => {
         {/* Right: Emoji buttons, theme switcher, hamburger */}
         <div className="flex items-center gap-2">
           <Audio />
-          <CursorSelector />
+          {/* <CursorSelector /> */}
           {/* Theme switcher */}
           <button
             onClick={toggleTheme}
