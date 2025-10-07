@@ -63,10 +63,10 @@ export default function Home() {
         <Landing />
         <Marquee className="flex lg:hidden -mt-8 mb-10 relative z-30" />
         <Cards />
+        <Images />
       </div>
-      <Images />
       <Service />
       <ExportHero />
-    </div>  
+    </div>
   );
 }

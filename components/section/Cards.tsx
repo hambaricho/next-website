@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatedHeader } from "../ui/AnimatedHeader";
 import Card from "../ui/Card";
 import CardsMobile from "./CardsMobile";
+import { ArrowRight } from "lucide-react";
 
 
 const coffeeData = [
@@ -211,9 +212,13 @@ export default function Page() {
     return (
         <>
             <div className="flex flex-col items-center relative z-30">
-                <p className="md:text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white">
+                <a
+                    href="/catalog"
+                    className="md:text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white flex items-center gap-2 transition hover:bg-white/10"
+                >
                     Our Coffee
-                </p>
+                    <ArrowRight className="w-5 h-5" />
+                </a>
                 <AnimatedHeader as="h2"
                     className="text-3xl md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold]"
                     text="From Ethiopia&lsquo;s lands" />

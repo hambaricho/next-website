@@ -9,6 +9,7 @@ import { AnimatedHeader } from "../ui/AnimatedHeader"
 import Button from "../ui/Button"
 import { Link } from "next-transition-router"
 import Marquee from "../ui/Marquee"
+import SVGLine from "../ui/SVGLine"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -98,6 +99,18 @@ const Landing = () => {
         }
     })
 
+    // useGSAP(() => {
+    //     if (window.innerWidth >= 768) {
+
+    //         let svg = document.querySelector('.svg-line');
+    //         let path = svg?.querySelector('path');
+
+    //         const pathLength = path?.getTotalLength();
+    //         console.log(pathLength);
+    //         gsap.set(path!, {strokeDasharray: 10})
+    //     }
+    // })
+
 
     return (
         <div ref={containerRef} className="min-h-[100dvh] md:min-h-[170dvh] relative z-10 flex flex-col transition-colors duration-300 items-center bg-gray-100 dark:bg-primary-dark
@@ -129,6 +142,7 @@ const Landing = () => {
                 </Link>
             </div>
 
+            {/* <SVGLine /> */}
             <Image
                 ref={birds1Ref}
                 src="/images/svg/birds.svg"
