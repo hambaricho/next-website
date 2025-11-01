@@ -71,19 +71,19 @@ const Spotlight = () => {
         <div className="marquee-container" id="marquee-1">
           <div className="marquee">
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/1.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/1.jpeg" alt="" />
             </div>
             <div className="marquee-img-item marquee-text-item">
               <h1>Quality</h1>
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/2.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/2.jpeg" alt="" />
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/3.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/3.jpeg" alt="" />
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/4.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/4.jpeg" alt="" />
             </div>
           </div>
         </div>
@@ -91,19 +91,19 @@ const Spotlight = () => {
         <div className="marquee-container" id="marquee-2">
           <div className="marquee">
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/5.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/5.jpeg" alt="" />
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/6.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/6.jpeg" alt="" />
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/7.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/7.jpeg" alt="" />
             </div>
             <div className="marquee-img-item marquee-text-item">
               <h1>Premium</h1>
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/8.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/8.jpeg" alt="" />
             </div>
           </div>
         </div>
@@ -111,19 +111,19 @@ const Spotlight = () => {
         <div className="marquee-container" id="marquee-3">
           <div className="marquee">
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/9.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/9.jpeg" alt="" />
             </div>
             <div className="marquee-img-item marquee-text-item">
               <h1>Heritage</h1>
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/10.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/10.jpeg" alt="" />
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/11.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/11.jpeg" alt="" />
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/12.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/12.jpeg" alt="" />
             </div>
           </div>
         </div>
@@ -131,19 +131,19 @@ const Spotlight = () => {
         <div className="marquee-container" id="marquee-4">
           <div className="marquee">
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/13.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/13.jpeg" alt="" />
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/1.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/1.jpeg" alt="" />
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/3.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/3.jpeg" alt="" />
             </div>
             <div className="marquee-img-item marquee-text-item">
               <h1>Identity</h1>
             </div>
             <div className="marquee-img-item">
-              <Image width={100} height={100} src="/images/gallery/5.jpeg" alt="" />
+              <Image width={200} height={100} src="/images/gallery/5.jpeg" alt="" />
             </div>
           </div>
         </div>
