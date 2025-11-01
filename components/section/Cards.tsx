@@ -233,7 +233,7 @@ export default function Page() {
 
             </div>
 
-            <div ref={containerRef} className="relative w-full min-h-[140dvh] bg-secondary flex flex-col items-center justify-between pb-10 px-10">
+            <div ref={containerRef} className="relative w-full min-h-[1100px] bg-secondary flex flex-col items-center justify-between pb-10 px-10">
                 <CardsMobile />
                 
                 {/* Instruction prompt - only visible when no card is active */}

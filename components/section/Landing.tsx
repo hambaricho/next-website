@@ -113,7 +113,7 @@ const Landing = () => {
 
 
     return (
-        <div ref={containerRef} className="min-h-[100dvh] md:min-h-[170dvh] relative z-10 flex flex-col transition-colors duration-300 items-center bg-gray-100 dark:bg-primary-dark
+        <div ref={containerRef} className="min-h-[100dvh] md:min-h-[1400px] relative z-10 flex flex-col transition-colors duration-300 items-center bg-gray-100 dark:bg-primary-dark
          pt-24 md:pt-44 overflow-hidden">
             <div ref={textRef} className="text-center mt-8 z-20 relative flex flex-col items-center">
                 {/* Screen reader only versions */}
