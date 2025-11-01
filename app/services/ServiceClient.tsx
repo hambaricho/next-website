@@ -74,7 +74,7 @@ const ServiceClient = () => {
                 </section>
             </div>
 
-            <section className="bg-greenSecondary min-h-screen text-white py-16 px-4 md:py-16 relative">
+            <section className="bg-greenSecondary min-h-screen flex flex-col justify-center text-white py-16 px-4 md:py-16 relative">
 
                 <Image
                     src="/images/organic.webp"

@@ -1,8 +1,8 @@
 import Cards from "@/components/section/Cards";
 import ExportHero from "@/components/section/ExportHero";
-import Images from "@/components/section/Images";
 import Landing from "@/components/section/Landing";
 import Service from "@/components/section/Service";
+import Spotlight from "@/components/section/Spotlight/Spotlight";
 import Marquee from "@/components/ui/Marquee";
 import SVGLine from "@/components/ui/SVGLine";
 import type { Metadata } from "next";
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@HambarichoCoffee", // Replace if you have a Twitter/X handle
+    site: "@HambarichoCoffee",
     title: "Premium Ethiopian Green Coffee Exporter | Hambaricho Coffee",
     description:
       "Fresh, traceable Ethiopian green coffee beans exported worldwide.",
@@ -63,7 +63,7 @@ export default function Home() {
         <Landing />
         <Marquee className="flex lg:hidden -mt-8 mb-10 relative z-30" />
         <Cards />
-        <Images />
+        <Spotlight />
       </div>
       <Service />
       <ExportHero />
