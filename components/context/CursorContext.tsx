@@ -1,7 +1,7 @@
 "use client"
 import { createContext, useContext, useEffect, useState } from "react"
 
-type CursorType = "default" | "coffee-bean" | "coffee-cup" | "pointer"
+type CursorType = "default" | "bag" | "bean" | "cup" | "cup2" | "machine"
 
 interface CursorContextType {
     cursor: CursorType
@@ -29,18 +29,24 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
         const body = document.body
         
         // Remove all cursor classes
-        body.classList.remove("cursor-coffee-bean", "cursor-coffee-cup", "cursor-pointer-custom")
+        body.classList.remove("cursor-bag", "cursor-bean", "cursor-cup", "cursor-cup2", "cursor-machine")
         
         // Add appropriate cursor class
         switch (cursor) {
-            case "coffee-bean":
-                body.classList.add("cursor-coffee-bean")
+            case "bag":
+                body.classList.add("cursor-bag")
                 break
-            case "coffee-cup":
-                body.classList.add("cursor-coffee-cup")
+            case "bean":
+                body.classList.add("cursor-bean")
                 break
-            case "pointer":
-                body.classList.add("cursor-pointer-custom")
+            case "cup":
+                body.classList.add("cursor-cup")
+                break
+            case "cup2":
+                body.classList.add("cursor-cup2")
+                break
+            case "machine":
+                body.classList.add("cursor-machine")
                 break
             default:
                 // Use default cursor

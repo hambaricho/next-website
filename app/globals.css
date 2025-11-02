@@ -1,17 +1,106 @@
 /* Custom Cursor Image Styles */
-.cursor-jebena,
-.cursor-jebena * {
-  cursor: url('/images/jebena.webp'), auto !important;
+.cursor-bag,
+.cursor-bag * {
+  cursor: url('/images/cursor/bag.png') 5 5, auto !important;
 }
 
-.cursor-art,
-.cursor-art * {
-  cursor: url('/images/card.webp'), auto !important;
+.cursor-bean,
+.cursor-bean * {
+  cursor: url('/images/cursor/bean.png') 5 5, auto !important;
 }
 
-.cursor-smoke,
-.cursor-smoke * {
-  cursor: url('/images/smoke.webp'), auto !important;
+.cursor-cup,
+.cursor-cup * {
+  cursor: url('/images/cursor/cup.png') 5 5, auto !important;
+}
+
+.cursor-cup2,
+.cursor-cup2 * {
+  cursor: url('/images/cursor/cup2.png') 5 5, auto !important;
+}
+
+.cursor-machine,
+.cursor-machine * {
+  cursor: url('/images/cursor/machine.png') 5 5, auto !important;
+}
+
+/* Override cursor on interactive elements for better usability */
+.cursor-bag button,
+.cursor-bag a,
+.cursor-bag a[href],
+.cursor-bag area[href],
+.cursor-bag [role="button"],
+.cursor-bag [role="link"],
+.cursor-bag input[type="submit"],
+.cursor-bag input[type="button"],
+.cursor-bag select,
+.cursor-bag textarea,
+.cursor-bag input,
+.cursor-bag [style*="cursor: pointer"],
+.cursor-bag [style*="cursor:pointer"],
+.cursor-bag [style*="cursor: alias"],
+.cursor-bag [style*="cursor:alias"],
+.cursor-bean button,
+.cursor-bean a,
+.cursor-bean a[href],
+.cursor-bean area[href],
+.cursor-bean [role="button"],
+.cursor-bean [role="link"],
+.cursor-bean input[type="submit"],
+.cursor-bean input[type="button"],
+.cursor-bean select,
+.cursor-bean textarea,
+.cursor-bean input,
+.cursor-bean [style*="cursor: pointer"],
+.cursor-bean [style*="cursor:pointer"],
+.cursor-bean [style*="cursor: alias"],
+.cursor-bean [style*="cursor:alias"],
+.cursor-cup button,
+.cursor-cup a,
+.cursor-cup a[href],
+.cursor-cup area[href],
+.cursor-cup [role="button"],
+.cursor-cup [role="link"],
+.cursor-cup input[type="submit"],
+.cursor-cup input[type="button"],
+.cursor-cup select,
+.cursor-cup textarea,
+.cursor-cup input,
+.cursor-cup [style*="cursor: pointer"],
+.cursor-cup [style*="cursor:pointer"],
+.cursor-cup [style*="cursor: alias"],
+.cursor-cup [style*="cursor:alias"],
+.cursor-cup2 button,
+.cursor-cup2 a,
+.cursor-cup2 a[href],
+.cursor-cup2 area[href],
+.cursor-cup2 [role="button"],
+.cursor-cup2 [role="link"],
+.cursor-cup2 input[type="submit"],
+.cursor-cup2 input[type="button"],
+.cursor-cup2 select,
+.cursor-cup2 textarea,
+.cursor-cup2 input,
+.cursor-cup2 [style*="cursor: pointer"],
+.cursor-cup2 [style*="cursor:pointer"],
+.cursor-cup2 [style*="cursor: alias"],
+.cursor-cup2 [style*="cursor:alias"],
+.cursor-machine button,
+.cursor-machine a,
+.cursor-machine a[href],
+.cursor-machine area[href],
+.cursor-machine [role="button"],
+.cursor-machine [role="link"],
+.cursor-machine input[type="submit"],
+.cursor-machine input[type="button"],
+.cursor-machine select,
+.cursor-machine textarea,
+.cursor-machine input,
+.cursor-machine [style*="cursor: pointer"],
+.cursor-machine [style*="cursor:pointer"],
+.cursor-machine [style*="cursor: alias"],
+.cursor-machine [style*="cursor:alias"] {
+  cursor: pointer !important;
 }
 @import "tailwindcss";
 

@@ -22,26 +22,29 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-1 bg-gray-200 z-50 absolute top-4 left-1/2 -translate-x-1/2 shadow-md">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/footerLogo.svg" alt="Logo" width={40} height={40} />
-        </Link>
-        
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8 items-center">
-          {navLinks.map(link => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-lg font-[SuisseIntl-Light] px-4 py-2 rounded transition-colors text-secondary"
-            >
-              {link.name}
-            </a>
-          ))}
+      <nav className="w-11/12 mx-auto flex items-center justify-between px-4 py-1 z-50 absolute top-4 left-1/2 -translate-x-1/2">
+        <div className="bg-gray-200 flex p-2 gap-4">
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/images/footerLogo.svg" alt="Logo" width={40} height={40} />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex gap-8 items-center">
+            {navLinks.map(link => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-lg font-[SuisseIntl-Light] px-4 py-2 rounded transition-colors text-secondary"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
         </div>
-        
+
         {/* Right: Emoji buttons, theme switcher, hamburger */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4 bg-gray-200 p-2">
+          <CursorSelector />
           <Audio />
           {/* <CursorSelector /> */}
           {/* Theme switcher */}
@@ -52,7 +55,7 @@ const NavBar = () => {
           >
             {theme === "dark" ? <Moon className="text-primary" /> : <Sun className="text-primary" />}
           </button>
-          
+
           {/* Hamburger Menu Button (Mobile Only) */}
           <button
             onClick={toggleMenu}
