@@ -1,4 +1,4 @@
-import { Blend, Disc, Star } from 'lucide-react'
+import { Bean, Blend, Disc, Star } from 'lucide-react'
 import Image from 'next/image'
 
 type Props = {
@@ -15,9 +15,10 @@ type Props = {
     processing?: string
     onClick?: () => void
     className?: string
+    shadow?: boolean
 }
 
-const Card = ({ image, title, cardInfo1, cardInfo2, cardInfo3, origin, flavor, altitude, processing, onClick, className }: Props) => {
+const Card = ({ image, title, cardInfo1, cardInfo2, cardInfo3, origin, flavor, altitude, processing, onClick, className, shadow }: Props) => {
     return (
 
         <div className={`w-[300px] h-auto flex flex-col ${className}`} onClick={onClick}>
@@ -26,26 +27,28 @@ const Card = ({ image, title, cardInfo1, cardInfo2, cardInfo3, origin, flavor, a
                 alt='Card Image hambaricho'
                 width={300}
                 height={480}
-                className='h-[350px] w-full rounded-t-xl rounded-b-3xl object-cover'
+                className={`h-[370px] w-full rounded-t-xl rounded-b-3xl object-cover ${shadow ? 'shadow-[2px_2px_6px_1px_rgba(0,_0,_0,_0.1)]' : ''}`}
             />
-            <div className='flex-1 p-4 rounded-b-xl rounded-t-3xl  bg-white shadow-lg lg:shadow-2xl shadow-secondary'>
+            <div className={`flex-1 py-8 px-4 relative rounded-b-xl rounded-t-3xl  bg-white ${shadow ? 'shadow-[2px_2px_6px_1px_rgba(0,_0,_0,_0.1)]' : ''}`}>
                 <p className='text-2xl text-center text-secondary uppercase font-[PPEditorialNew-Ultrabold]'>{title}</p>
+                <Disc className='absolute top-5 right-5 text-secondary/60 rotate-45' />
+
                 <ul className='mt-4'>
                     {cardInfo1 &&
                         <li className='font-[SuisseIntl-light] text-black flex gap-2 items-center '>
-                            <Disc size={15} className='ml-2 text-black' />
+                            <Bean size={15} className=' text-black' />
                             {cardInfo1}
                         </li>
                     }
                     {cardInfo2 &&
                         <li className='font-[SuisseIntl-light] text-black flex gap-2 items-center '>
-                            <Star size={15} className='ml-2 text-primary' />
+                            <Star size={15} className=' text-primary' />
                             {cardInfo2}
                         </li>
                     }
                     {cardInfo3 &&
                         <li className='font-[SuisseIntl-light] text-black flex gap-2 items-center '>
-                            <Blend size={15} className='ml-2 text-primary' />
+                            <Blend size={15} className=' text-greenSecondary' />
                             {cardInfo3}
                         </li>
                     }

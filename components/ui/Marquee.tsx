@@ -16,10 +16,10 @@ function MarqueeItem({ images, from, to }: {
             >
                 {images.map((image: string, index: number) => {
                     return <Image
-                        width={250}
+                        width={350}
                         height={250}
                         alt={`marqueImg${index}`}
-                        className="object-contain pr-20"
+                        className="object-contain pr-32"
                         src={image}
                         key={index} />
 
@@ -34,10 +34,10 @@ function MarqueeItem({ images, from, to }: {
             >
                 {images.map((image: string, index: number) => {
                     return <Image
-                        width={250}
+                        width={350}
                         height={250}
                         alt={`marqueImg${index}`}
-                        className="object-contain pr-20"
+                        className="object-contain pr-32"
                         src={image}
                         key={index} />;
 

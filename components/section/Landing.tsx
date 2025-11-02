@@ -3,13 +3,12 @@ import { useGSAP } from "@gsap/react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
+import { Link } from "next-transition-router"
 import Image from "next/image"
 import { useRef } from "react"
-import { AnimatedHeader } from "../ui/AnimatedHeader"
 import Button from "../ui/Button"
-import { Link } from "next-transition-router"
+import Copy from "../ui/Copy/Copy"
 import Marquee from "../ui/Marquee"
-import SVGLine from "../ui/SVGLine"
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -126,13 +125,15 @@ const Landing = () => {
                 </p>
 
                 {/* Animated versions */}
-
-                <AnimatedHeader as="h1"
-                    className="text-4xl md:text-6xl text-center max-w-[870px] px-4 uppercase text-secondary dark:text-gray-100 font-[SuisseIntl-Bold] mb-1"
-                    text="From Ethiopia&lsquo;s" />
-                <AnimatedHeader as="h1"
-                    className="text-4xl md:text-6xl text-center max-w-8xl px-4 uppercase text-secondary dark:text-gray-100 font-[SuisseIntl-Bold] mb-1"
-                    text="highlands to your roastery" />
+                <Copy animateOnScroll={true} delay={0}>
+                    <h1
+                        className="text-4xl md:text-6xl text-center max-w-6xl px-4 uppercase text-secondary dark:text-gray-100 font-[SuisseIntl-Bold] mb-1"
+                    >
+                        From Ethiopia&lsquo;s <br />
+                        highlands to your roastery
+                    </h1>
+                </Copy>
+                
                 <p className="md:text-xl text-center max-w-sm md:max-w-3xl px-4 text-gray-700 dark:text-gray-300 font-[SuisseIntl-Light] mb-4">
                     Hambaricho Coffee exports premium Ethiopian green beans directly
                     from trusted producers, rooted in heritage, delivered with reliability.

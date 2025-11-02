@@ -184,3 +184,13 @@ body {
   mask: radial-gradient(var(--r) at var(--r), #0000 calc(100% - 1px), #000)
     calc(-1 * var(--r));
 }
+
+.stamp {
+	color: #555;
+	border: 3px double #555;
+	display: inline-block;
+	text-transform: uppercase;
+	-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+  -webkit-mask-size: 100px 80px;
+  mix-blend-mode: multiply;
+}

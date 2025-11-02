@@ -2,10 +2,9 @@
 import { gsap } from "gsap";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { AnimatedHeader } from "../ui/AnimatedHeader";
 import Card from "../ui/Card";
+import Copy from "../ui/Copy/Copy";
 import CardsMobile from "./CardsMobile";
-import { ArrowRight } from "lucide-react";
 
 
 const coffeeData = [
@@ -62,13 +61,13 @@ const coffeeData = [
 ];
 
 const cardLayout = [
-    { x: -300, y: 25, rotation: -8, z: 10 },
+    { x: -300, y: 25, rotation: 8, z: 10 },
     { x: 0, y: 25, rotation: 0, z: 10 },
-    { x: 300, y: 25, rotation: 10, z: 10 },
-    { x: -450, y: 500, rotation: 2, z: 10 },
-    { x: -170, y: 450, rotation: 20, z: 10 },
-    { x: 120, y: 500, rotation: 10, z: 10 },
-    { x: 450, y: 500, rotation: -20, z: 40 }
+    { x: 300, y: 25, rotation: -10, z: 10 },
+    { x: -300, y: 500, rotation: -8, z: 10 },
+    { x: -100, y: 550, rotation: 0, z: 10 },
+    { x: 120, y: 500, rotation: -10, z: 0 },
+    { x: 350, y: 500, rotation: 10, z: 40 }
 ];
 
 export default function Page() {
@@ -212,19 +211,14 @@ export default function Page() {
     return (
         <>
             <div className="flex flex-col items-center relative z-30">
-                <a
-                    href="/catalog"
-                    className="md:text-xl text-center w-max relative z-10 max-w-4xl px-4 text-white font-[SuisseIntl-Regular] mb-4 rounded-full border-[1px] border-white flex items-center gap-2 transition hover:bg-white/10"
-                >
-                    Our Coffee
-                    <ArrowRight className="w-5 h-5" />
-                </a>
-                <AnimatedHeader as="h2"
-                    className="text-3xl md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold]"
-                    text="From Ethiopia&lsquo;s lands" />
-                <AnimatedHeader as="h2"
-                    className="text-3xl md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold]"
-                    text="to every horizon" />
+                <Copy animateOnScroll>
+                    <h2
+                        className="text-3xl md:text-6xl text-center relative z-10 md:max-w-8xl uppercase text-white font-[SuisseIntl-Bold]"
+                    >
+                        From Ethiopia&lsquo;s lands <br />
+                        to every horizon
+                    </h2>
+                </Copy>
 
                 <p className="text-sm md:text-2xl text-center relative z-10 px-4 lg:px-2 md:max-w-4xl text-gray-200 font-[SuisseIntl-Light] lg:mb-4">
                     Hambaricho Coffee exports premium Ethiopian green beans directly
@@ -235,29 +229,29 @@ export default function Page() {
 
             <div ref={containerRef} className="relative w-full min-h-[1100px] bg-secondary flex flex-col items-center justify-between pb-10 px-10">
                 <CardsMobile />
-                
+
                 {/* Instruction prompt - only visible when no card is active */}
                 {activeIndex === null && (
                     <div className="hidden lg:flex absolute top-1/3 right-8 flex-col items-center gap-2 pointer-events-none z-[100]">
                         <p className="text-white text-xl font-[SuisseIntl-Light] text-center">
                             Click on a card to explore
                         </p>
-                        <svg 
-                            className="w-10 h-10 text-white" 
-                            fill="none" 
-                            stroke="currentColor" 
+                        <svg
+                            className="w-10 h-10 text-white"
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                         >
-                            <path 
-                                strokeLinecap="round" 
-                                strokeLinejoin="round" 
-                                strokeWidth={2} 
-                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" 
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
                             />
                         </svg>
                     </div>
                 )}
-                
+
                 <div
                     ref={overlayRef}
                     className="fixed inset-0 bg-black/30 transition-all"
@@ -274,6 +268,7 @@ export default function Page() {
                         cardInfo1={coffee.cardInfo1}
                         cardInfo2={coffee.cardInfo2}
                         cardInfo3={coffee.cardInfo3}
+                        shadow={true}
                         className="card hidden lg:block absolute cursor-pointer" />
                 ))}
 

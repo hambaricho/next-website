@@ -36,12 +36,12 @@ const ServiceClient = () => {
         <main className="min-h-screen bg-white dark:bg-secondary pt-14 md:pt-28 pb-10">
             <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-16 py-12">
                 <header className="text-center mb-16">
-                    <p className="font-[PPEditorialNew-Italic] text-lg text-greenSecondary dark:text-white">
+                    <p className="font-[PPEditorialNew-Italic] text-lg text-primary dark:text-white">
                         From Bean to Bag
                     </p>
-                    <AnimatedHeader as='h1' text='A Journey of' className='font-[SuisseIntl-Bold] text-4xl md:text-8xl text-greenSecondary dark:text-white' />
-                    <AnimatedHeader as='h1' text='Unwavering Quality' className='font-[SuisseIntl-Bold] text-4xl md:text-8xl text-greenSecondary dark:text-white' />
-                    <p className="mt-4 text-greenSecondary dark:text-white font-[SuisseIntl-Light] md:text-lg max-w-2xl mx-auto">
+                    <AnimatedHeader as='h1' text='A Journey of' className='font-[SuisseIntl-Bold] text-4xl md:text-8xl text-primary dark:text-white' />
+                    <AnimatedHeader as='h1' text='Unwavering Quality' className='font-[SuisseIntl-Bold] text-4xl md:text-8xl text-primary dark:text-white' />
+                    <p className="mt-4 text-primary dark:text-white font-[SuisseIntl-Light] md:text-lg max-w-2xl mx-auto">
                         Every coffee bean has a story. Ours is one of meticulous care, expert
                         craftsmanship, and a commitment to excellence at every single stage.
                     </p>
@@ -49,17 +49,17 @@ const ServiceClient = () => {
 
                 {/* Steps */}
                 <section className="grid md:grid-cols-2 gap-12 relative">
-                    <div className='h-full w-[2px] bg-greenSecondary absolute top-1/2 left-1/2 -translate-y-1/2 hidden lg:flex'></div>
+                    <div className='h-full w-[2px] bg-primary absolute top-1/2 left-1/2 -translate-y-1/2 hidden lg:flex'></div>
                     {steps.map((s, idx) => (
                         <div key={s.num} className={`flex ${idx % 2 === 0 ? 'flex-col' : 'flex-col-reverse'} gap-4`}>
                             <div>
                                 <div className="flex flex-col items-start gap-4">
-                                    <span className="font-[PPEditorialNew-Italic] text-5xl text-greenSecondary/50">
+                                    <span className="font-[PPEditorialNew-Italic] text-5xl text-primary/50">
                                         {s.num}
                                     </span>
-                                    <AnimatedHeader as='h2' text={s.title} className='font-[SuisseIntl-Bold] text-2xl md:text-3xl text-greenSecondary dark:text-white' />
+                                    <AnimatedHeader as='h2' text={s.title} className='font-[SuisseIntl-Bold] text-2xl md:text-3xl text-primary dark:text-white' />
                                 </div>
-                                <p className="text-greenSecondary dark:text-white font-[SuisseIntl-Light]">{s.text}</p>
+                                <p className="text-primary dark:text-white font-[SuisseIntl-Light]">{s.text}</p>
                             </div>
                             <div className="relative w-full h-52 md:h-56 lg:h-64">
                                 <Image
@@ -74,7 +74,7 @@ const ServiceClient = () => {
                 </section>
             </div>
 
-            <section className="bg-greenSecondary min-h-screen flex flex-col justify-center text-white py-16 px-4 md:py-16 relative">
+            <section className="bg-primary min-h-screen flex flex-col justify-center text-white py-16 px-4 md:py-16 relative">
 
                 <Image
                     src="/images/organic.webp"
@@ -147,14 +147,14 @@ const ServiceClient = () => {
             </section>
 
             <div className='md:h-[100dvh] w-full flex flex-col justify-center items-center gap-6 md:gap-12 bg-white dark:bg-secondary py-12'>
-                <p className='text-greenSecondary font-[SuisseIntl-Bold] max-w-4xl text-5xl md:text-8xl text-center mx-auto'>
+                <p className='text-primary font-[SuisseIntl-Bold] max-w-4xl text-5xl md:text-8xl text-center mx-auto'>
                     Export with Confidence
                 </p>
 
                 <Button
                     onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
                     text='Contact Us'
-                    className='bg-greenSecondary text-white mx-auto'
+                    className='bg-primary text-white mx-auto'
                 />
 
             </div>

@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { TransitionRouter } from "next-transition-router";
+import Image from "next/image";
 
 export function Providers({ children }: { children: React.ReactNode }) {
     const firstLayer = useRef(null);
@@ -95,8 +96,14 @@ export function Providers({ children }: { children: React.ReactNode }) {
             {children}
             <div
                 ref={firstLayer}
-                className="fixed inset-0 z-50 translate-x-full bg-primary"
-            />
+                className="fixed inset-0 z-50 translate-x-full bg-transparent"
+            >
+                <div className="relative w-full h-full">
+                    <div className="hidden md:block absolute top-0 left-0 -rotate-90 w-full -translate-y-1">
+                        <Image src="/images/greenBg.svg" alt="zigzag border" width={1600} height={80} className="w-full select-none pointer-events-none" />
+                    </div>
+                </div>
+            </div>
             <div
                 ref={secondLayer}
                 className="fixed inset-0 z-50 translate-x-full bg-greenSecondary"

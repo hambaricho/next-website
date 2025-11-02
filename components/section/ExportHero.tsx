@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Button from "../ui/Button"
 import { Link } from "next-transition-router"
+import Copy from "../ui/Copy/Copy"
 
 export default function ExportHero() {
     return (
@@ -16,10 +17,12 @@ export default function ExportHero() {
                 </div>
 
                 <div className="max-w-5xl mx-auto text-center relative z-10">
-                    <h1 className="text-5xl md:text-8xl font-[SuisseIntl-Bold] text-white">
-                        Global Reach<br />
-                        <span className="text-5xl md:text-8xl font-[SuisseIntl-Bold] text-white/90">Grounded In Origin.</span>
-                    </h1>
+                    <Copy animateOnScroll>
+                        <h1 className="text-5xl md:text-8xl font-[SuisseIntl-Bold] text-white">
+                            Global Reach<br />
+                            <span className="text-5xl md:text-8xl font-[SuisseIntl-Bold] text-white/90">Grounded In Origin.</span>
+                        </h1>
+                    </Copy>
                     <p className="max-w-3xl mx-auto text-base md:text-lg font-[SuisseIntl-Light] text-white/90 mb-4 mt-4">
                         We bridge the distance with seamless global logistics. Our expert team manages the entire export process from meticulous documentation to bespoke packaging, ensuring your coffee arrives with its quality and story intact.
                     </p>
