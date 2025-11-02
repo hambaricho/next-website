@@ -225,7 +225,7 @@ const Footer = () => {
     <footer ref={footerRef} className="bg-secondary relative">
 
       <Link href="/"
-        className='absolute top-16 md:top-10 left-10 z-30'>
+        className='absolute top-16 md:top-10 left-4 md:left-10 z-30'>
         <Image
           src="/images/footerLogo.svg"
           alt="Hambaricho logo"
@@ -248,7 +248,7 @@ const Footer = () => {
           <motion.button
             key="button"
             onClick={() => setIsExpanded(true)}
-            className="text-center flex lg:hidden absolute right-10 top-16 md:top-10 z-30 px-4 py-2 text-white font-[SuisseIntl-Regular] rounded-full border-[1px] border-white cursor-pointer"
+            className="text-center flex lg:hidden absolute right-4 lg:right-10 top-16 md:top-10 z-30 px-4 py-2 text-white font-[SuisseIntl-Regular] rounded-full border-[1px] border-white cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: -20 }}
@@ -262,7 +262,7 @@ const Footer = () => {
           // Expanded Card
           <motion.div
             key="card"
-            className="bg-white/10 backdrop-blur-md border border-white/20 fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-2xl p-6 w-11/12 md:min-w-[400px] shadow-2xl"
+            className="bg-secondary z-50 border border-white/20 fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-2xl p-6 w-11/12 md:min-w-[400px] shadow-2xl"
             initial={{ opacity: 0, scale: 0.8, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: -20 }}
@@ -384,7 +384,7 @@ const Footer = () => {
             {socials.map((social) => (
               <div key={social.label}>
                 <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                  <img src={social.icon} alt={social.label} width={30} height={30} />
+                  <Image src={social.icon} alt={social.label} width={30} height={30} />
                 </a>
               </div>
             ))}

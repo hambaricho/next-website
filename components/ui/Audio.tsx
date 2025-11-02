@@ -2,7 +2,7 @@
 import { Pause, Play } from "lucide-react";
 import React, { useRef, useState } from "react";
 
-const Audio = () => {
+const Audio = ({className}: {className?: string}) => {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -18,7 +18,7 @@ const Audio = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className={` flex-col items-center justify-center ${className}`}>
             <audio ref={audioRef} src="/audio/birds.mp3" />
 
             <button

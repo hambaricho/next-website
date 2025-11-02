@@ -1,4 +1,16 @@
-/* Custom Cursor Image Styles */
+/* Text Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
 .cursor-bag,
 .cursor-bag * {
   cursor: url('/images/cursor/bag.png') 5 5, auto !important;

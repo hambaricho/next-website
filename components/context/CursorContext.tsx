@@ -22,7 +22,6 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
     }, [])
 
     useEffect(() => {
-        // Save cursor preference to localStorage
         localStorage.setItem("cursor-preference", cursor)
 
         // Apply cursor style to body
@@ -31,7 +30,6 @@ export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
         // Remove all cursor classes
         body.classList.remove("cursor-bag", "cursor-bean", "cursor-cup", "cursor-cup2", "cursor-machine")
         
-        // Add appropriate cursor class
         switch (cursor) {
             case "bag":
                 body.classList.add("cursor-bag")

@@ -44,13 +44,19 @@ const NavBar = () => {
 
         {/* Right: Emoji buttons, theme switcher, hamburger */}
         <div className="flex items-center gap-4 bg-gray-200 p-2">
+          {/* Text Marquee */}
+          <div className="hidden lg:flex items-center overflow-hidden whitespace-nowrap w-64">
+            <div className="animate-marquee text-secondary font-[SuisseIntl-Regular] text-sm uppercase">
+              Hambaricho Coffee CO • Hambaricho Coffee CO • Hambaricho Coffee CO
+            </div>
+          </div>
+
           <CursorSelector />
-          <Audio />
-          {/* <CursorSelector /> */}
+          <Audio className="hidden lg:flex" />
           {/* Theme switcher */}
           <button
             onClick={toggleTheme}
-            className={`w-10 h-10 flex items-center justify-center rounded cursor-pointer `}
+            className={`w-10 h-10 hidden lg:flex items-center justify-center rounded cursor-pointer `}
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <Moon className="text-primary" /> : <Sun className="text-primary" />}
@@ -105,6 +111,18 @@ const NavBar = () => {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-gray-200 shadow-2xl z-50 md:hidden"
           >
+            <div className="flex justify-end gap-2 w-full">
+
+              <Audio className="flex lg:hidden" />
+              <button
+                onClick={toggleTheme}
+                className={`w-10 h-10 flex items-center justify-center rounded cursor-pointer `}
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? <Moon className="text-primary" /> : <Sun className="text-primary" />}
+              </button>
+            </div>
+
             <div className="flex flex-col h-full pt-24 px-8">
               {navLinks.map((link, index) => (
                 <motion.a
@@ -119,6 +137,11 @@ const NavBar = () => {
                   {link.name}
                 </motion.a>
               ))}
+            </div>
+            <div className="flex items-center overflow-hidden whitespace-nowrap w-full absolute bottom-4">
+              <div className="animate-marquee text-primary font-[SuisseIntl-Regular] text-2xl uppercase">
+                Hambaricho Coffee CO • Hambaricho Coffee CO • Hambaricho Coffee CO
+              </div>
             </div>
           </motion.div>
         )}

@@ -19,7 +19,7 @@ function MarqueeItem({ images, from, to }: {
                         width={350}
                         height={250}
                         alt={`marqueImg${index}`}
-                        className="object-contain pr-32"
+                        className="object-contain w-64 lg:w-96 pr-32"
                         src={image}
                         key={index} />
 
@@ -37,7 +37,7 @@ function MarqueeItem({ images, from, to }: {
                         width={350}
                         height={250}
                         alt={`marqueImg${index}`}
-                        className="object-contain pr-32"
+                        className="object-contain w-64 lg:w-96 pr-32"
                         src={image}
                         key={index} />;
 

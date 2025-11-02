@@ -16,7 +16,6 @@ const CursorSelector = () => {
         { id: "bag", name: "Coffee Bag", image: "/images/cursor/bag.png" },
         { id: "bean", name: "Coffee Bean", image: "/images/cursor/bean.png" },
         { id: "cup", name: "Coffee Cup", image: "/images/cursor/cup.png" },
-        { id: "cup2", name: "Coffee Cup 2", image: "/images/cursor/cup2.png" },
         { id: "machine", name: "Coffee Machine", image: "/images/cursor/machine.png" },
     ] as const
 
@@ -45,7 +44,7 @@ const CursorSelector = () => {
     const activeCursor = cursors.find(c => c.id === cursor) || cursors[0]
 
     return (
-        <div ref={dropdownRef} className="relative">
+        <div ref={dropdownRef} className="relative hidden lg:flex">
             {/* Trigger Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}

@@ -8,7 +8,7 @@ export default function ExportHero() {
     return (
         <section className="relative z-30 flex flex-col items-center justify-center md:min-h-[100dvh] bg-secondary py-12 md:py-20">
 
-            <div className="hidden md:block absolute top-0 left-0  w-full -translate-y-1">
+            <div className=" absolute top-0 left-0  w-full -translate-y-1">
                 <Image src="/images/greenBg.svg" alt="zigzag border" width={1600} height={80} className="w-full select-none pointer-events-none" />
             </div>
             <div className="w-full h-full bg-primary px-4">
@@ -32,7 +32,7 @@ export default function ExportHero() {
                 </div>
             </div>
 
-            <div className="hidden lg:flex absolute bottom-0 -z-0 left-0 w-full translate-y-1 rotate-180">
+            <div className=" absolute bottom-0 -z-0 left-0 w-full translate-y-1 rotate-180">
                 <Image src="/images/greenBg.svg" alt="zigzag border" width={1600} height={80} className="w-full select-none pointer-events-none" />
             </div>
         </section>
