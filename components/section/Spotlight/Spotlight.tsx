@@ -73,7 +73,7 @@ const Spotlight = () => {
             <div className="marquee-img-item">
               <Image width={200} height={100} src="/images/gallery/1.jpeg" alt="" />
             </div>
-            <div className="marquee-img-item marquee-text-item">
+            <div className="marquee-img-item marquee-text-item text-white">
               <h1>Quality</h1>
             </div>
             <div className="marquee-img-item">
@@ -99,7 +99,7 @@ const Spotlight = () => {
             <div className="marquee-img-item">
               <Image width={200} height={100} src="/images/gallery/7.jpeg" alt="" />
             </div>
-            <div className="marquee-img-item marquee-text-item">
+            <div className="marquee-img-item marquee-text-item text-white">
               <h1>Premium</h1>
             </div>
             <div className="marquee-img-item">
@@ -113,7 +113,7 @@ const Spotlight = () => {
             <div className="marquee-img-item">
               <Image width={200} height={100} src="/images/gallery/9.jpeg" alt="" />
             </div>
-            <div className="marquee-img-item marquee-text-item">
+            <div className="marquee-img-item marquee-text-item text-white">
               <h1>Heritage</h1>
             </div>
             <div className="marquee-img-item">
@@ -139,7 +139,7 @@ const Spotlight = () => {
             <div className="marquee-img-item">
               <Image width={200} height={100} src="/images/gallery/3.jpeg" alt="" />
             </div>
-            <div className="marquee-img-item marquee-text-item">
+            <div className="marquee-img-item marquee-text-item text-white">
               <h1>Identity</h1>
             </div>
             <div className="marquee-img-item">

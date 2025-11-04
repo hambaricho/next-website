@@ -376,7 +376,7 @@ const Footer = () => {
         <div className="footer-header-content">
           <div className="footer-header">
             <Copy animateOnScroll={true} delay={0.2}>
-              <h1 className="font-[SuisseIntl-Bold] text-4xl lg:text-8xl uppercase max-w-4xl font-extrabold">Let&apos;s keep the coffee brewing together</h1>
+              <h1 className="font-[SuisseIntl-Bold] text-white text-4xl lg:text-8xl uppercase max-w-4xl font-extrabold">Let&apos;s keep the coffee brewing together</h1>
             </Copy>
           </div>
 

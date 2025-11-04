@@ -1,4 +1,6 @@
+import { useTransitionRouter } from 'next-transition-router';
 import Card from '../ui/Card';
+
 
 const coffeeData = [
     {
@@ -53,7 +55,13 @@ const coffeeData = [
     },
 ];
 
+
 const CardsMobile = () => {
+    const router = useTransitionRouter();
+
+    const handleClick = () => {
+        router.push('/catalog');
+    }
     return (
         <div className='grid grid-cols-1 gap-4 py-8 place-content-center place-items-center lg:hidden w-full'>
             {coffeeData.map((coffee, index) => (
@@ -65,6 +73,7 @@ const CardsMobile = () => {
                     cardInfo1={coffee.cardInfo1}
                     cardInfo2={coffee.cardInfo2}
                     cardInfo3={coffee.cardInfo3}
+                    onClick={()=>handleClick()}
                 />
             ))}
         </div>
